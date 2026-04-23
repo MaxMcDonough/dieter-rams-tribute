@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 4200 1690">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20, .st21, .st22, .st23, .st24, .st25, .st26, .st27, .st28, .st29, .st30, .st31, .st32, .st33, .st34, .st35, .st36, .st37, .st38, .st39, .st40, .st41, .st42, .st43, .st44, .st45, .st46, .st47, .st48, .st49, .st50, .st51, .st52, .st53, .st54, .st55, .st56, .st57, .st58, .st59, .st60, .st61, .st62, .st63, .st64, .st65, .st66 {
+        isolation: isolate;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st9, .st11, .st12, .st15, .st16, .st17, .st18, .st22, .st23, .st26, .st27, .st28, .st29, .st31, .st34, .st35, .st36, .st39, .st40, .st41, .st67, .st54, .st56, .st58, .st59, .st62, .st64 {
+        font-family: HelveticaNeue-Medium, 'Helvetica Neue';
+        font-weight: 500;
+      }
+
+      .st0, .st1, .st3, .st9, .st13, .st33, .st68, .st69, .st57, .st60, .st70 {
+        fill: #6b6860;
+      }
+
+      .st0, .st1, .st4, .st22, .st40, .st41 {
+        font-size: 6px;
+      }
+
+      .st0, .st41 {
+        letter-spacing: .17em;
+      }
+
+      .st1, .st4, .st40 {
+        letter-spacing: .17em;
+      }
+
+      .st2, .st5, .st6, .st15, .st33, .st44, .st58, .st66 {
+        font-size: 7px;
+      }
+
+      .st2, .st5, .st6, .st17, .st18, .st21, .st22, .st26, .st27, .st31, .st32, .st38, .st40, .st41, .st42, .st43, .st71, .st45, .st49, .st52, .st59, .st66 {
+        fill: #b0ada5;
+      }
+
+      .st2, .st15 {
+        letter-spacing: .43em;
+      }
+
+      .st72 {
+        stroke: #b0ada5;
+        stroke-width: .5px;
+      }
+
+      .st72, .st10, .st73 {
+        fill: none;
+      }
+
+      .st3, .st11, .st13, .st24, .st28, .st35, .st39, .st50, .st69, .st62 {
+        font-size: 8px;
+      }
+
+      .st3, .st35, .st74 {
+        letter-spacing: .19em;
+      }
+
+      .st4, .st12, .st28, .st29, .st34, .st35, .st36, .st75, .st47, .st51, .st58, .st63, .st65, .st76 {
+        fill: #fff;
+      }
+
+      .st5, .st67 {
+        letter-spacing: .28em;
+      }
+
+      .st6, .st77 {
+        letter-spacing: .29em;
+      }
+
+      .st7, .st11, .st19, .st20, .st24, .st25, .st37, .st78, .st48, .st79, .st53, .st54, .st56, .st61 {
+        fill: #2a2825;
+      }
+
+      .st7, .st43 {
+        font-size: 12px;
+      }
+
+      .st8 {
+        letter-spacing: .09em;
+      }
+
+      .st8, .st13, .st14, .st21, .st24, .st33, .st68, .st50, .st53, .st69, .st57, .st60, .st66 {
+        font-family: Helvetica, Helvetica;
+      }
+
+      .st8, .st14, .st15, .st16, .st44, .st50, .st62, .st64 {
+        fill: #9a9590;
+      }
+
+      .st8, .st51 {
+        font-size: 11px;
+      }
+
+      .st9, .st21, .st23, .st26, .st27, .st31, .st34, .st36, .st56, .st60, .st64 {
+        font-size: 9px;
+      }
+
+      .st9, .st36 {
+        letter-spacing: .22em;
+      }
+
+      .st10 {
+        opacity: .5;
+        stroke: #9a9590;
+      }
+
+      .st12 {
+        font-size: 16px;
+        letter-spacing: .12em;
+      }
+
+      .st80, .st81 {
+        fill: #f5f4f0;
+      }
+
+      .st14, .st17, .st18, .st42 {
+        font-size: 13px;
+      }
+
+      .st16 {
+        letter-spacing: .2em;
+      }
+
+      .st16, .st19, .st29, .st78, .st68, .st53, .st54, .st57 {
+        font-size: 10px;
+      }
+
+      .st17 {
+        letter-spacing: .38em;
+      }
+
+      .st18 {
+        letter-spacing: .38em;
+      }
+
+      .st19, .st25, .st78, .st42, .st43, .st49 {
+        font-family: Georgia-Italic, Georgia;
+        font-style: italic;
+      }
+
+      .st20, .st32, .st37, .st38, .st46, .st47, .st48, .st55, .st61, .st63, .st65 {
+        font-family: HelveticaNeue-Light, 'Helvetica Neue';
+        font-weight: 300;
+      }
+
+      .st20, .st45, .st47 {
+        font-size: 22px;
+      }
+
+      .st22, .st28 {
+        letter-spacing: .25em;
+      }
+
+      .st77, .st45, .st51, .st52 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+      }
+
+      .st23 {
+        letter-spacing: .28em;
+      }
+
+      .st23, .st39, .st46, .st55, .st82 {
+        fill: #c8442a;
+      }
+
+      .st25, .st38, .st48 {
+        font-size: 36px;
+      }
+
+      .st26 {
+        letter-spacing: .33em;
+      }
+
+      .st27 {
+        letter-spacing: .33em;
+      }
+
+      .st81, .st73, .st83, .st76 {
+        stroke: #e8e6e0;
+      }
+
+      .st31, .st64 {
+        letter-spacing: .44em;
+      }
+
+      .st84 {
+        letter-spacing: .4em;
+      }
+
+      .st32, .st37 {
+        font-size: 28px;
+      }
+
+      .st85 {
+        letter-spacing: .68em;
+      }
+
+      .st34 {
+        letter-spacing: .28em;
+      }
+
+      .st39 {
+        letter-spacing: .19em;
+      }
+
+      .st86 {
+        letter-spacing: 4.04em;
+      }
+
+      .st87 {
+        letter-spacing: 3.91em;
+      }
+
+      .st88 {
+        letter-spacing: 4.22em;
+      }
+
+      .st89 {
+        letter-spacing: 2.05em;
+      }
+
+      .st45, .st52 {
+        opacity: .4;
+      }
+
+      .st46, .st49 {
+        font-size: 18px;
+      }
+
+      .st90 {
+        opacity: .04;
+      }
+
+      .st83, .st91 {
+        fill: #e8e6e0;
+      }
+
+      .st52, .st55, .st59, .st61 {
+        font-size: 14px;
+      }
+
+      .st92 {
+        fill: #1a1916;
+      }
+
+      .st93 {
+        fill: #f0efeb;
+      }
+
+      .st58, .st59 {
+        letter-spacing: .21em;
+      }
+
+      .st62 {
+        letter-spacing: .38em;
+      }
+
+      .st63 {
+        font-size: 30px;
+      }
+
+      .st65 {
+        font-size: 52px;
+      }
+    </style>
+  </defs>
+  <rect class="st93" width="4200" height="1690"/>
+  <rect class="st92" width="4200" height="60"/>
+  <text class="st12" transform="translate(30 38)"><tspan x="0" y="0">Dieter Rams — Portfolio Website</tspan></text>
+  <text class="st14" transform="translate(370 38)"><tspan x="0" y="0">High-Fidelity Design Board</tspan></text>
+  <text class="st8" transform="translate(3900 38)"><tspan x="0" y="0">MAX MCDONOUGH · EMILY CARR · 2026</tspan></text>
+  <text class="st18" transform="translate(40 110)"><tspan x="0" y="0">DESKTOP — 1440PX</tspan></text>
+  <text class="st37" transform="translate(40 148)"><tspan x="0" y="0">Full-Width Screens</tspan></text>
+  <rect x="44" y="184" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st92" x="40" y="180" width="560" height="380" rx="4" ry="4"/>
+  <g class="st90">
+    <line class="st72" x1="120" y1="180" x2="120" y2="560"/>
+    <line class="st72" x1="200" y1="180" x2="200" y2="560"/>
+    <line class="st72" x1="280" y1="180" x2="280" y2="560"/>
+    <line class="st72" x1="360" y1="180" x2="360" y2="560"/>
+    <line class="st72" x1="440" y1="180" x2="440" y2="560"/>
+    <line class="st72" x1="520" y1="180" x2="520" y2="560"/>
+    <line class="st72" x1="40" y1="256" x2="600" y2="256"/>
+    <line class="st72" x1="40" y1="332" x2="600" y2="332"/>
+    <line class="st72" x1="40" y1="408" x2="600" y2="408"/>
+    <line class="st72" x1="40" y1="484" x2="600" y2="484"/>
+  </g>
+  <rect x="40" y="180" width="560" height="36"/>
+  <text class="st34" transform="translate(60 203)"><tspan x="0" y="0">DIETER</tspan></text>
+  <text class="st23" transform="translate(112 203)"><tspan x="0" y="0">RAMS</tspan></text>
+  <text class="st50" transform="translate(222.06 203)"><tspan class="st74" x="0" y="0">About </tspan><tspan class="st84" x="32.1" y="0">	</tspan><tspan class="st86" x="37.5" y="0">	</tspan><tspan class="st74" x="72" y="0">Principles </tspan><tspan class="st89" x="125.36" y="0">	</tspan><tspan class="st88" x="144" y="0">	</tspan><tspan class="st74" x="180" y="0">Work </tspan><tspan class="st85" x="208.37" y="0">	</tspan><tspan class="st88" x="216" y="0">	</tspan><tspan class="st74" x="252" y="0">Legacy </tspan><tspan class="st87" x="290.49" y="0">	</tspan><tspan class="st74" x="324" y="0">Timeline</tspan></text>
+  <text class="st64" transform="translate(158.06 320)"><tspan x="0" y="0">INDUSTRIAL DESIGNER · 1932 – PRESENT</tspan></text>
+  <text class="st65" transform="translate(182.28 380)"><tspan x="0" y="0">Dieter Rams</tspan></text>
+  <text class="st49" transform="translate(224.91 420)"><tspan x="0" y="0">&quot;Weniger, aber besser.&quot;</tspan></text>
+  <rect class="st82" x="300" y="440" width="40" height="2"/>
+  <text class="st62" transform="translate(295.07 520)"><tspan x="0" y="0">SCROLL</tspan></text>
+  <line class="st10" x1="320" y1="528" x2="320" y2="550"/>
+  <text class="st59" transform="translate(294.29 584)"><tspan x="0" y="0">HERO</tspan></text>
+  <rect x="644" y="184" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st75" x="640" y="180" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st92" x="640" y="180" width="560" height="36" rx="4" ry="4"/>
+  <text class="st34" transform="translate(660 203)"><tspan x="0" y="0">DIETER</tspan></text>
+  <text class="st23" transform="translate(712 203)"><tspan x="0" y="0">RAMS</tspan></text>
+  <text class="st31" transform="translate(664 242)"><tspan x="0" y="0">01 — ABOUT</tspan></text>
+  <text class="st20" transform="translate(664 268)"><tspan x="0" y="0">Architect of Quiet Objects</tspan></text>
+  <rect class="st81" x="664" y="280" width="130" height="170"/>
+  <text class="st38" transform="translate(704.66 375)"><tspan x="0" y="0">DR</tspan></text>
+  <g>
+    <text class="st6" transform="translate(664 458)"><tspan x="0" y="0">BORN</tspan></text>
+    <text class="st53" transform="translate(664 472)"><tspan x="0" y="0">20 May 1932</tspan></text>
+    <text class="st5" transform="translate(734 458)"><tspan x="0" y="0">EDU</tspan></text>
+    <text class="st53" transform="translate(734 472)"><tspan x="0" y="0">Architecture</tspan></text>
+  </g>
+  <g class="st30">
+    <text class="st57" transform="translate(814 296)"><tspan x="0" y="0">Dieter Rams is one of the most influential</tspan></text>
+    <text class="st68" transform="translate(996.3 296)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st57" transform="translate(814 312)"><tspan x="0" y="0">industrial designers of the twentieth century.</tspan></text>
+    <text class="st68" transform="translate(1008.37 312)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st57" transform="translate(814 328)"><tspan x="0" y="0">Trained as an architect and carpenter, he joined</tspan></text>
+    <text class="st68" transform="translate(1025.44 328)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st57" transform="translate(814 344)"><tspan x="0" y="0">Braun in 1955 and rose to become Head of</tspan></text>
+    <text class="st68" transform="translate(1005.24 344)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st57" transform="translate(814 360)"><tspan x="0" y="0">Design — a role he held for over three decades.</tspan></text>
+  </g>
+  <rect class="st82" x="814" y="390" width="3" height="45"/>
+  <g class="st30">
+    <text class="st19" transform="translate(826 405)"><tspan x="0" y="0">&quot;I believe designers should eliminate</tspan></text>
+    <text class="st78" transform="translate(989.36 405)"><tspan x="0" y="0"> </tspan></text>
+    <text class="st19" transform="translate(826 420)"><tspan x="0" y="0">the unnecessary.&quot;</tspan></text>
+  </g>
+  <text class="st59" transform="translate(888.38 584)"><tspan x="0" y="0">ABOUT</tspan></text>
+  <rect x="1244" y="184" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st80" x="1240" y="180" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st92" x="1240" y="180" width="560" height="36" rx="4" ry="4"/>
+  <text class="st34" transform="translate(1260 203)"><tspan x="0" y="0">DIETER</tspan></text>
+  <text class="st23" transform="translate(1312 203)"><tspan x="0" y="0">RAMS</tspan></text>
+  <text class="st31" transform="translate(1264 242)"><tspan x="0" y="0">02 — PRINCIPLES</tspan></text>
+  <text class="st20" transform="translate(1264 268)"><tspan x="0" y="0">Ten Principles of Good Design</tspan></text>
+  <g>
+    <rect class="st76" x="1264" y="280" width="248" height="48"/>
+    <text class="st46" transform="translate(1276 310)"><tspan x="0" y="0">01</tspan></text>
+    <text class="st56" transform="translate(1306 298)"><tspan x="0" y="0">Good design is innovative</tspan></text>
+    <text class="st33" transform="translate(1306 312)"><tspan x="0" y="0">Technological development offers new opportunities.</tspan></text>
+    <rect class="st76" x="1524" y="280" width="248" height="48"/>
+    <text class="st46" transform="translate(1536 310)"><tspan x="0" y="0">02</tspan></text>
+    <text class="st56" transform="translate(1566 298)"><tspan x="0" y="0">Good design makes a product useful</tspan></text>
+    <text class="st33" transform="translate(1566 312)"><tspan x="0" y="0">Satisfying functional, psychological, aesthetic criteria.</tspan></text>
+    <rect class="st76" x="1264" y="336" width="248" height="48"/>
+    <text class="st46" transform="translate(1276 366)"><tspan x="0" y="0">03</tspan></text>
+    <text class="st56" transform="translate(1306 354)"><tspan x="0" y="0">Good design is aesthetic</tspan></text>
+    <text class="st33" transform="translate(1306 368)"><tspan x="0" y="0">Aesthetic quality is integral to usefulness.</tspan></text>
+    <rect class="st76" x="1524" y="336" width="248" height="48"/>
+    <text class="st46" transform="translate(1536 366)"><tspan x="0" y="0">04</tspan></text>
+    <text class="st56" transform="translate(1566 354)"><tspan x="0" y="0">Good design is understandable</tspan></text>
+    <text class="st33" transform="translate(1566 368)"><tspan x="0" y="0">It clarifies the product&apos;s structure.</tspan></text>
+    <rect class="st76" x="1264" y="392" width="248" height="48"/>
+    <text class="st46" transform="translate(1276 422)"><tspan x="0" y="0">05</tspan></text>
+    <text class="st56" transform="translate(1306 410)"><tspan x="0" y="0">Good design is unobtrusive</tspan></text>
+    <text class="st33" transform="translate(1306 424)"><tspan x="0" y="0">Neither decorative objects nor works of art.</tspan></text>
+    <rect class="st76" x="1524" y="392" width="248" height="48"/>
+    <text class="st46" transform="translate(1536 422)"><tspan x="0" y="0">06</tspan></text>
+    <text class="st56" transform="translate(1566 410)"><tspan x="0" y="0">Good design is honest</tspan></text>
+    <text class="st33" transform="translate(1566 424)"><tspan x="0" y="0">Does not manipulate the consumer.</tspan></text>
+    <rect class="st76" x="1264" y="448" width="248" height="48"/>
+    <text class="st46" transform="translate(1276 478)"><tspan x="0" y="0">07</tspan></text>
+    <text class="st56" transform="translate(1306 466)"><tspan x="0" y="0">Good design is long-lasting</tspan></text>
+    <text class="st33" transform="translate(1306 480)"><tspan x="0" y="0">Never appears antiquated.</tspan></text>
+    <rect class="st76" x="1524" y="448" width="248" height="48"/>
+    <text class="st46" transform="translate(1536 478)"><tspan x="0" y="0">08</tspan></text>
+    <text class="st56" transform="translate(1566 466)"><tspan x="0" y="0">Good design is thorough</tspan></text>
+    <text class="st33" transform="translate(1566 480)"><tspan x="0" y="0">Nothing must be arbitrary or left to chance.</tspan></text>
+    <rect class="st76" x="1264" y="504" width="248" height="48"/>
+    <text class="st46" transform="translate(1276 534)"><tspan x="0" y="0">09</tspan></text>
+    <text class="st56" transform="translate(1306 522)"><tspan x="0" y="0">Good design is environmentally friendly</tspan></text>
+    <text class="st33" transform="translate(1306 536)"><tspan x="0" y="0">Conserves resources, minimises pollution.</tspan></text>
+    <rect class="st76" x="1524" y="504" width="248" height="48"/>
+    <text class="st46" transform="translate(1536 534)"><tspan x="0" y="0">10</tspan></text>
+    <text class="st56" transform="translate(1566 522)"><tspan x="0" y="0">As little design as possible</tspan></text>
+    <text class="st33" transform="translate(1566 536)"><tspan x="0" y="0">Less, but better. Back to purity.</tspan></text>
+  </g>
+  <text class="st59" transform="translate(1463.77 584)"><tspan x="0" y="0">PRINCIPLES</tspan></text>
+  <rect x="1844" y="184" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st75" x="1840" y="180" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st92" x="1840" y="180" width="560" height="36" rx="4" ry="4"/>
+  <text class="st34" transform="translate(1860 203)"><tspan x="0" y="0">DIETER</tspan></text>
+  <text class="st23" transform="translate(1912 203)"><tspan x="0" y="0">RAMS</tspan></text>
+  <text class="st31" transform="translate(1864 242)"><tspan x="0" y="0">03 — WORK</tspan></text>
+  <text class="st20" transform="translate(1864 268)"><tspan x="0" y="0">Selected Products</tspan></text>
+  <rect class="st92" x="1864" y="278" width="48" height="22"/>
+  <text class="st35" transform="translate(1878.49 293)"><tspan x="0" y="0">ALL</tspan></text>
+  <rect class="st73" x="1918" y="278" width="60" height="22"/>
+  <text class="st3" transform="translate(1930.17 293)"><tspan x="0" y="0">BRAUN</tspan></text>
+  <rect class="st73" x="1984" y="278" width="60" height="22"/>
+  <text class="st3" transform="translate(1995.42 293)"><tspan x="0" y="0">VITSOE</tspan></text>
+  <g>
+    <rect class="st81" x="1864" y="310" width="120" height="100"/>
+    <text class="st45" transform="translate(1917.03 366)"><tspan x="0" y="0">◉</tspan></text>
+    <text class="st56" transform="translate(1868 426)"><tspan x="0" y="0">SK 4 Radiogram</tspan></text>
+    <text class="st13" transform="translate(1868 438)"><tspan x="0" y="0">Braun · 1956</tspan></text>
+    <rect class="st81" x="1996" y="310" width="120" height="100"/>
+    <text class="st45" transform="translate(2049.03 366)"><tspan x="0" y="0">◉</tspan></text>
+    <text class="st56" transform="translate(2000 426)"><tspan x="0" y="0">T 3 Pocket Radio</tspan></text>
+    <text class="st13" transform="translate(2000 438)"><tspan x="0" y="0">Braun · 1958</tspan></text>
+    <rect class="st81" x="2128" y="310" width="120" height="100"/>
+    <text class="st45" transform="translate(2181.03 366)"><tspan x="0" y="0">◎</tspan></text>
+    <text class="st56" transform="translate(2132 426)"><tspan x="0" y="0">606 Shelving</tspan></text>
+    <text class="st13" transform="translate(2132 438)"><tspan x="0" y="0">Vitsoe · 1960</tspan></text>
+    <rect class="st81" x="2260" y="310" width="120" height="100"/>
+    <text class="st45" transform="translate(2313.03 366)"><tspan x="0" y="0">◉</tspan></text>
+    <text class="st56" transform="translate(2264 426)"><tspan x="0" y="0">ET 66 Calculator</tspan></text>
+    <text class="st13" transform="translate(2264 438)"><tspan x="0" y="0">Braun · 1987</tspan></text>
+    <rect class="st81" x="1864" y="450" width="120" height="100"/>
+    <text class="st45" transform="translate(1917.03 506)"><tspan x="0" y="0">◉</tspan></text>
+    <rect class="st81" x="1996" y="450" width="120" height="100"/>
+    <text class="st45" transform="translate(2049.03 506)"><tspan x="0" y="0">◉</tspan></text>
+    <rect class="st81" x="2128" y="450" width="120" height="100"/>
+    <text class="st45" transform="translate(2181.03 506)"><tspan x="0" y="0">◎</tspan></text>
+    <rect class="st81" x="2260" y="450" width="120" height="100"/>
+    <text class="st45" transform="translate(2313.03 506)"><tspan x="0" y="0">◉</tspan></text>
+  </g>
+  <text class="st59" transform="translate(2092.35 584)"><tspan x="0" y="0">WORK</tspan></text>
+  <rect x="44" y="634" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st92" x="40" y="630" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st92" x="40" y="630" width="560" height="36"/>
+  <text class="st34" transform="translate(60 653)"><tspan x="0" y="0">DIETER</tspan></text>
+  <text class="st23" transform="translate(112 653)"><tspan x="0" y="0">RAMS</tspan></text>
+  <text class="st64" transform="translate(64 692)"><tspan x="0" y="0">04 — LEGACY</tspan></text>
+  <text class="st47" transform="translate(64 718)"><tspan x="0" y="0">Enduring Influence</tspan></text>
+  <g>
+    <rect x="60" y="730" width="168" height="120"/>
+    <text class="st29" transform="translate(72 776)"><tspan x="0" y="0">Apple &amp; Digital</tspan></text>
+    <text class="st50" transform="translate(72 792)"><tspan x="0" y="0">Ive cited Rams as primary</tspan></text>
+    <text class="st50" transform="translate(72 804)"><tspan x="0" y="0">influence for Apple&apos;s design.</tspan></text>
+    <rect x="236" y="730" width="168" height="120"/>
+    <text class="st29" transform="translate(248 776)"><tspan x="0" y="0">Architecture</tspan></text>
+    <text class="st50" transform="translate(248 792)"><tspan x="0" y="0">Honest materials, structural</tspan></text>
+    <text class="st50" transform="translate(248 804)"><tspan x="0" y="0">clarity, no ornament.</tspan></text>
+    <rect x="412" y="730" width="168" height="120"/>
+    <text class="st29" transform="translate(424 776)"><tspan x="0" y="0">Sustainability</tspan></text>
+    <text class="st50" transform="translate(424 792)"><tspan x="0" y="0">Durable, repairable products</tspan></text>
+    <text class="st50" transform="translate(424 804)"><tspan x="0" y="0">decades before the movement.</tspan></text>
+    <rect x="60" y="858" width="168" height="120"/>
+    <text class="st29" transform="translate(72 904)"><tspan x="0" y="0">Design Education</tspan></text>
+    <text class="st50" transform="translate(72 920)"><tspan x="0" y="0">Ten Principles taught in every</tspan></text>
+    <text class="st50" transform="translate(72 932)"><tspan x="0" y="0">design program worldwide.</tspan></text>
+    <rect x="236" y="858" width="168" height="120"/>
+    <text class="st29" transform="translate(248 904)"><tspan x="0" y="0">User Experience</tspan></text>
+    <text class="st50" transform="translate(248 920)"><tspan x="0" y="0">User-centered ethos that</tspan></text>
+    <text class="st50" transform="translate(248 932)"><tspan x="0" y="0">predates UX by decades.</tspan></text>
+    <rect x="412" y="858" width="168" height="120"/>
+    <text class="st29" transform="translate(424 904)"><tspan x="0" y="0">Furniture</tspan></text>
+    <text class="st50" transform="translate(424 920)"><tspan x="0" y="0">606 and 620 defined modular</tspan></text>
+    <text class="st50" transform="translate(424 932)"><tspan x="0" y="0">modern furniture design.</tspan></text>
+  </g>
+  <text class="st59" transform="translate(283 1034)"><tspan x="0" y="0">LEGACY</tspan></text>
+  <rect x="644" y="634" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st80" x="640" y="630" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st92" x="640" y="630" width="560" height="36" rx="4" ry="4"/>
+  <text class="st34" transform="translate(660 653)"><tspan x="0" y="0">DIETER</tspan></text>
+  <text class="st23" transform="translate(712 653)"><tspan x="0" y="0">RAMS</tspan></text>
+  <text class="st31" transform="translate(664 692)"><tspan x="0" y="0">05 — TIMELINE</tspan></text>
+  <text class="st20" transform="translate(664 718)"><tspan x="0" y="0">A Life in Design</tspan></text>
+  <g>
+    <line class="st73" x1="690" y1="730" x2="690" y2="998"/>
+    <circle class="st82" cx="690" cy="734" r="4"/>
+    <text class="st39" transform="translate(706 734)"><tspan x="0" y="0">1932</tspan></text>
+    <text class="st54" transform="translate(706 746)"><tspan x="0" y="0">Born in Wiesbaden, Germany</tspan></text>
+    <circle class="st82" cx="690" cy="772" r="4"/>
+    <text class="st39" transform="translate(706 772)"><tspan x="0" y="0">1955</tspan></text>
+    <text class="st54" transform="translate(706 784)"><tspan x="0" y="0">Joins Braun</tspan></text>
+    <circle class="st82" cx="690" cy="810" r="4"/>
+    <text class="st39" transform="translate(706 810)"><tspan x="0" y="0">1956</tspan></text>
+    <text class="st54" transform="translate(706 822)"><tspan x="0" y="0">SK 4 &quot;Snow White&apos;s Coffin&quot;</tspan></text>
+    <circle class="st82" cx="690" cy="848" r="4"/>
+    <text class="st39" transform="translate(706 848)"><tspan x="0" y="0">1960</tspan></text>
+    <text class="st54" transform="translate(706 860)"><tspan x="0" y="0">606 Universal Shelving System</tspan></text>
+    <circle class="st82" cx="690" cy="886" r="4"/>
+    <text class="st39" transform="translate(706 886)"><tspan x="0" y="0">1961</tspan></text>
+    <text class="st54" transform="translate(706 898)"><tspan x="0" y="0">Head of Design at Braun</tspan></text>
+    <circle class="st82" cx="690" cy="924" r="4"/>
+    <text class="st39" transform="translate(706 924)"><tspan x="0" y="0">1976</tspan></text>
+    <text class="st54" transform="translate(706 936)"><tspan x="0" y="0">Ten Principles of Good Design</tspan></text>
+    <circle class="st82" cx="690" cy="962" r="4"/>
+    <text class="st39" transform="translate(706 962)"><tspan x="0" y="0">1997</tspan></text>
+    <text class="st54" transform="translate(706 974)"><tspan x="0" y="0">Retirement from Braun</tspan></text>
+    <circle class="st82" cx="690" cy="998" r="4"/>
+    <text class="st39" transform="translate(706 998)"><tspan x="0" y="0">2018</tspan></text>
+    <text class="st54" transform="translate(706 1010)"><tspan x="0" y="0">&quot;Rams&quot; Documentary</tspan></text>
+  </g>
+  <text class="st59" transform="translate(875.84 1034)"><tspan x="0" y="0">TIMELINE</tspan></text>
+  <rect x="1244" y="634" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st75" x="1240" y="630" width="560" height="380" rx="4" ry="4"/>
+  <rect class="st92" x="1240" y="630" width="560" height="36" rx="4" ry="4"/>
+  <text class="st34" transform="translate(1260 653)"><tspan x="0" y="0">DIETER</tspan></text>
+  <text class="st23" transform="translate(1312 653)"><tspan x="0" y="0">RAMS</tspan></text>
+  <text class="st31" transform="translate(1264 692)"><tspan x="0" y="0">06 — CONTACT</tspan></text>
+  <text class="st20" transform="translate(1264 718)"><tspan x="0" y="0">Get in Touch</tspan></text>
+  <text class="st7" transform="translate(1264 748)"><tspan x="0" y="0">Enquiries</tspan></text>
+  <text class="st60" transform="translate(1264 768)"><tspan x="0" y="0">For general enquiries about Dieter</tspan></text>
+  <text class="st60" transform="translate(1264 782)"><tspan x="0" y="0">Rams&apos;s work and design philosophy.</tspan></text>
+  <rect class="st82" x="1264" y="800" width="40" height="2"/>
+  <text class="st5" transform="translate(1264 828)"><tspan x="0" y="0">STUDIO</tspan></text>
+  <text class="st53" transform="translate(1264 842)"><tspan x="0" y="0">Kronberg im Taunus, Germany</tspan></text>
+  <text class="st6" transform="translate(1264 870)"><tspan x="0" y="0">ARCHIVE</tspan></text>
+  <text class="st53" transform="translate(1264 884)"><tspan x="0" y="0">Museum für Angewandte Kunst</tspan></text>
+  <text class="st6" transform="translate(1540 748)"><tspan x="0" y="0">NAME</tspan></text>
+  <rect class="st81" x="1540" y="754" width="236" height="30"/>
+  <text class="st5" transform="translate(1540 798)"><tspan x="0" y="0">EMAIL</tspan></text>
+  <rect class="st81" x="1540" y="804" width="236" height="30"/>
+  <text class="st5" transform="translate(1540 848)"><tspan x="0" y="0">MESSAGE</tspan></text>
+  <rect class="st81" x="1540" y="854" width="236" height="80"/>
+  <rect class="st92" x="1540" y="946" width="100" height="28"/>
+  <text class="st28" transform="translate(1548.29 964)"><tspan x="0" y="0">SEND ENQUIRY</tspan></text>
+  <text class="st59" transform="translate(1476.69 1034)"><tspan x="0" y="0">CONTACT</tspan></text>
+  <text class="st17" transform="translate(2200.27 979.16)"><tspan x="0" y="0">MOBILE — 390PX</tspan></text>
+  <text class="st37" transform="translate(2200.27 1017.16)"><tspan x="0" y="0">Responsive Screens</tspan></text>
+  <g>
+    <rect x="2203.27" y="1042.16" width="200" height="400" rx="16" ry="16"/>
+    <rect class="st92" x="2200.27" y="1039.16" width="200" height="400" rx="16" ry="16"/>
+    <g>
+      <path class="st92" d="M2216.27,1039.16h168c8.84,0,16,6.27,16,14h0c0,7.73-7.16,14-16,14h-168c-8.84,0-16-6.27-16-14h0c0-7.73,7.16-14,16-14Z"/>
+      <text class="st28" transform="translate(2214.27 1058.16)"><tspan x="0" y="0">DR</tspan></text>
+      <text class="st51" transform="translate(2380.27 1058.16)"><tspan x="0" y="0">☰</tspan></text>
+    </g>
+    <text class="st15" transform="translate(2232.3 1179.16)"><tspan x="0" y="0">INDUSTRIAL DESIGNER</tspan></text>
+    <text class="st63" transform="translate(2262.49 1224.16)"><tspan x="0" y="0">Dieter</tspan></text>
+    <text class="st63" transform="translate(2262.77 1257.16)"><tspan x="0" y="0">Rams</tspan></text>
+    <text class="st42" transform="translate(2231.6 1291.16)"><tspan x="0" y="0">&quot;Weniger, aber besser.&quot;</tspan></text>
+    <rect class="st82" x="2286.27" y="1309.16" width="28" height="2"/>
+    <text class="st44" transform="translate(2275.26 1409.16)"><tspan class="st67" x="0" y="0">SCROLL </tspan><tspan class="st77" x="43.78" y="0">↓</tspan></text>
+    <text class="st59" transform="translate(2274.56 1469.16)"><tspan x="0" y="0">HERO</tspan></text>
+  </g>
+  <g>
+    <rect x="2443.27" y="1042.16" width="200" height="400" rx="16" ry="16"/>
+    <rect class="st75" x="2440.27" y="1039.16" width="200" height="400" rx="16" ry="16"/>
+    <path class="st92" d="M2456.27,1039.16h168c8.84,0,16,6.27,16,14h0c0,7.73-7.16,14-16,14h-168c-8.84,0-16-6.27-16-14h0c0-7.73,7.16-14,16-14Z"/>
+    <text class="st28" transform="translate(2454.27 1058.16)"><tspan x="0" y="0">DR</tspan></text>
+    <text class="st51" transform="translate(2620.27 1058.16)"><tspan x="0" y="0">☰</tspan></text>
+    <text class="st2" transform="translate(2456.27 1089.16)"><tspan x="0" y="0">01 — ABOUT</tspan></text>
+    <text class="st61" transform="translate(2456.27 1107.16)"><tspan x="0" y="0">Architect of Quiet Objects</tspan></text>
+    <rect class="st81" x="2456.27" y="1119.16" width="168" height="100"/>
+    <text class="st32" transform="translate(2521.34 1177.16)"><tspan x="0" y="0">DR</tspan></text>
+    <g>
+      <text class="st13" transform="translate(2456.27 1239.16)"><tspan x="0" y="0" xml:space="preserve">       </tspan></text>
+      <text class="st13" transform="translate(2456.27 1239.16)"><tspan x="0" y="0">Dieter Rams is one of the most</tspan></text>
+      <text class="st69" transform="translate(2566.09 1239.16)"><tspan x="0" y="0" xml:space="preserve">       </tspan></text>
+      <text class="st13" transform="translate(2456.27 1253.16)"><tspan x="0" y="0">influential industrial designers of the</tspan></text>
+      <text class="st69" transform="translate(2583.46 1253.16)"><tspan x="0" y="0" xml:space="preserve">       </tspan></text>
+      <text class="st13" transform="translate(2456.27 1267.16)"><tspan x="0" y="0">twentieth century.</tspan></text>
+      <text class="st69" transform="translate(2518.38 1267.16)"><tspan x="0" y="0" xml:space="preserve">     </tspan></text>
+    </g>
+    <g>
+      <rect class="st80" x="2456.27" y="1289.16" width="80" height="32"/>
+      <text class="st41" transform="translate(2462.27 1301.16)"><tspan x="0" y="0">BORN</tspan></text>
+      <text class="st24" transform="translate(2462.27 1313.16)"><tspan x="0" y="0">1932</tspan></text>
+      <rect class="st80" x="2544.27" y="1289.16" width="80" height="32"/>
+      <text class="st40" transform="translate(2550.27 1301.16)"><tspan x="0" y="0">EDU</tspan></text>
+      <text class="st24" transform="translate(2550.27 1313.16)"><tspan x="0" y="0">Architecture</tspan></text>
+      <rect class="st80" x="2456.27" y="1327.16" width="80" height="32"/>
+      <text class="st41" transform="translate(2462.27 1339.16)"><tspan x="0" y="0">BRAUN</tspan></text>
+      <text class="st24" transform="translate(2462.27 1351.16)"><tspan x="0" y="0">1955–1997</tspan></text>
+      <rect class="st80" x="2544.27" y="1327.16" width="80" height="32"/>
+      <text class="st40" transform="translate(2550.27 1339.16)"><tspan x="0" y="0">VITSOE</tspan></text>
+      <text class="st24" transform="translate(2550.27 1351.16)"><tspan x="0" y="0">1959–Present</tspan></text>
+    </g>
+    <text class="st59" transform="translate(2508.65 1469.16)"><tspan x="0" y="0">ABOUT</tspan></text>
+  </g>
+  <g>
+    <rect x="2683.27" y="1042.16" width="200" height="400" rx="16" ry="16"/>
+    <rect class="st80" x="2680.27" y="1039.16" width="200" height="400" rx="16" ry="16"/>
+    <path class="st92" d="M2696.27,1039.16h168c8.84,0,16,6.27,16,14h0c0,7.73-7.16,14-16,14h-168c-8.84,0-16-6.27-16-14h0c0-7.73,7.16-14,16-14Z"/>
+    <text class="st28" transform="translate(2694.27 1058.16)"><tspan x="0" y="0">DR</tspan></text>
+    <text class="st51" transform="translate(2860.27 1058.16)"><tspan x="0" y="0">☰</tspan></text>
+    <text class="st2" transform="translate(2696.27 1089.16)"><tspan x="0" y="0">02 — PRINCIPLES</tspan></text>
+    <text class="st61" transform="translate(2696.27 1107.16)"><tspan x="0" y="0">Ten Principles</tspan></text>
+    <g>
+      <rect class="st76" x="2696.27" y="1119.16" width="168" height="36"/>
+      <text class="st55" transform="translate(2706.27 1143.16)"><tspan x="0" y="0">01</tspan></text>
+      <text class="st11" transform="translate(2730.27 1141.16)"><tspan x="0" y="0">Good design is innovative</tspan></text>
+      <rect class="st76" x="2696.27" y="1159.16" width="168" height="36"/>
+      <text class="st55" transform="translate(2706.27 1183.16)"><tspan x="0" y="0">02</tspan></text>
+      <text class="st11" transform="translate(2730.27 1181.16)"><tspan x="0" y="0">Good design is useful</tspan></text>
+      <rect class="st76" x="2696.27" y="1199.16" width="168" height="36"/>
+      <text class="st55" transform="translate(2706.27 1223.16)"><tspan x="0" y="0">03</tspan></text>
+      <text class="st11" transform="translate(2730.27 1221.16)"><tspan x="0" y="0">Good design is aesthetic</tspan></text>
+      <rect class="st76" x="2696.27" y="1239.16" width="168" height="36"/>
+      <text class="st55" transform="translate(2706.27 1263.16)"><tspan x="0" y="0">04</tspan></text>
+      <text class="st11" transform="translate(2730.27 1261.16)"><tspan x="0" y="0">Good design is understandable</tspan></text>
+      <rect class="st76" x="2696.27" y="1279.16" width="168" height="36"/>
+      <text class="st55" transform="translate(2706.27 1303.16)"><tspan x="0" y="0">05</tspan></text>
+      <text class="st11" transform="translate(2730.27 1301.16)"><tspan x="0" y="0">Good design is unobtrusive</tspan></text>
+      <rect class="st76" x="2696.27" y="1319.16" width="168" height="36"/>
+      <text class="st55" transform="translate(2706.27 1343.16)"><tspan x="0" y="0">06</tspan></text>
+      <text class="st11" transform="translate(2730.27 1341.16)"><tspan x="0" y="0">Good design is honest</tspan></text>
+      <rect class="st76" x="2696.27" y="1359.16" width="168" height="36"/>
+      <text class="st55" transform="translate(2706.27 1383.16)"><tspan x="0" y="0">07</tspan></text>
+      <text class="st11" transform="translate(2730.27 1381.16)"><tspan x="0" y="0">Good design is long-lasting</tspan></text>
+    </g>
+    <text class="st59" transform="translate(2724.04 1469.16)"><tspan x="0" y="0">PRINCIPLES</tspan></text>
+  </g>
+  <g>
+    <rect x="2923.27" y="1042.16" width="200" height="400" rx="16" ry="16"/>
+    <rect class="st75" x="2920.27" y="1039.16" width="200" height="400" rx="16" ry="16"/>
+    <path class="st92" d="M2936.27,1039.16h168c8.84,0,16,6.27,16,14h0c0,7.73-7.16,14-16,14h-168c-8.84,0-16-6.27-16-14h0c0-7.73,7.16-14,16-14Z"/>
+    <text class="st28" transform="translate(2934.27 1058.16)"><tspan x="0" y="0">DR</tspan></text>
+    <text class="st51" transform="translate(3100.27 1058.16)"><tspan x="0" y="0">☰</tspan></text>
+    <text class="st2" transform="translate(2936.27 1089.16)"><tspan x="0" y="0">03 — WORK</tspan></text>
+    <text class="st61" transform="translate(2936.27 1107.16)"><tspan x="0" y="0">Selected Products</tspan></text>
+    <g>
+      <rect class="st92" x="2936.27" y="1119.16" width="40" height="18"/>
+      <text class="st4" transform="translate(2949.33 1132.16)"><tspan x="0" y="0">ALL</tspan></text>
+      <rect class="st73" x="2982.27" y="1119.16" width="50" height="18"/>
+      <text class="st0" transform="translate(2994.21 1132.16)"><tspan x="0" y="0">BRAUN</tspan></text>
+      <rect class="st73" x="3038.27" y="1119.16" width="50" height="18"/>
+      <text class="st1" transform="translate(3049.71 1132.16)"><tspan x="0" y="0">VITSOE</tspan></text>
+    </g>
+    <g>
+      <rect class="st81" x="2936.27" y="1149.16" width="50" height="50"/>
+      <text class="st52" transform="translate(2956.83 1179.16)"><tspan x="0" y="0">◉</tspan></text>
+      <text class="st56" transform="translate(2996.27 1169.16)"><tspan x="0" y="0">SK 4 Radiogram</tspan></text>
+      <text class="st33" transform="translate(2996.27 1183.16)"><tspan x="0" y="0">Braun · 1956</tspan></text>
+      <rect class="st81" x="2936.27" y="1209.16" width="50" height="50"/>
+      <text class="st52" transform="translate(2956.83 1239.16)"><tspan x="0" y="0">◉</tspan></text>
+      <text class="st56" transform="translate(2996.27 1229.16)"><tspan x="0" y="0">T 3 Pocket Radio</tspan></text>
+      <text class="st33" transform="translate(2996.27 1243.16)"><tspan x="0" y="0">Braun · 1958</tspan></text>
+      <rect class="st81" x="2936.27" y="1269.16" width="50" height="50"/>
+      <text class="st52" transform="translate(2956.83 1299.16)"><tspan x="0" y="0">◎</tspan></text>
+      <text class="st56" transform="translate(2996.27 1289.16)"><tspan x="0" y="0">606 Shelving</tspan></text>
+      <text class="st33" transform="translate(2996.27 1303.16)"><tspan x="0" y="0">Vitsoe · 1960</tspan></text>
+      <rect class="st81" x="2936.27" y="1329.16" width="50" height="50"/>
+      <text class="st52" transform="translate(2956.83 1359.16)"><tspan x="0" y="0">◉</tspan></text>
+      <text class="st56" transform="translate(2996.27 1349.16)"><tspan x="0" y="0">ET 66 Calculator</tspan></text>
+      <text class="st33" transform="translate(2996.27 1363.16)"><tspan x="0" y="0">Braun · 1987</tspan></text>
+    </g>
+    <text class="st59" transform="translate(2992.62 1469.16)"><tspan x="0" y="0">WORK</tspan></text>
+  </g>
+  <g>
+    <rect x="3163.27" y="1042.16" width="200" height="400" rx="16" ry="16"/>
+    <rect class="st75" x="3160.27" y="1039.16" width="200" height="400" rx="16" ry="16"/>
+    <path class="st92" d="M3176.27,1039.16h168c8.84,0,16,6.27,16,14h0c0,7.73-7.16,14-16,14h-168c-8.84,0-16-6.27-16-14h0c0-7.73,7.16-14,16-14Z"/>
+    <text class="st28" transform="translate(3174.27 1058.16)"><tspan x="0" y="0">DR</tspan></text>
+    <text class="st51" transform="translate(3340.27 1058.16)"><tspan x="0" y="0">☰</tspan></text>
+    <text class="st2" transform="translate(3176.27 1089.16)"><tspan x="0" y="0">06 — CONTACT</tspan></text>
+    <text class="st61" transform="translate(3176.27 1107.16)"><tspan x="0" y="0">Get in Touch</tspan></text>
+    <text class="st13" transform="translate(3176.27 1129.16)"><tspan x="0" y="0">For enquiries about Dieter</tspan></text>
+    <text class="st13" transform="translate(3176.27 1141.16)"><tspan x="0" y="0">Rams&apos;s work and legacy.</tspan></text>
+    <g>
+      <text class="st22" transform="translate(3176.27 1159.16)"><tspan x="0" y="0">NAME</tspan></text>
+      <rect class="st81" x="3176.27" y="1165.16" width="168" height="26"/>
+      <text class="st22" transform="translate(3176.27 1207.16)"><tspan x="0" y="0">EMAIL</tspan></text>
+      <rect class="st81" x="3176.27" y="1213.16" width="168" height="26"/>
+      <text class="st22" transform="translate(3176.27 1255.16)"><tspan x="0" y="0">MESSAGE</tspan></text>
+      <rect class="st81" x="3176.27" y="1261.16" width="168" height="70"/>
+      <rect class="st92" x="3176.27" y="1341.16" width="90" height="26"/>
+      <text class="st58" transform="translate(3186.28 1357.16)"><tspan x="0" y="0">SEND ENQUIRY</tspan></text>
+    </g>
+    <text class="st59" transform="translate(3216.96 1469.16)"><tspan x="0" y="0">CONTACT</tspan></text>
+  </g>
+  <text class="st17" transform="translate(3460.27 979.16)"><tspan x="0" y="0">FOUNDATIONS</tspan></text>
+  <text class="st37" transform="translate(3460.27 1017.16)"><tspan x="0" y="0">Design System</tspan></text>
+  <g>
+    <rect x="3463.27" y="1042.16" width="500" height="440" rx="4" ry="4"/>
+    <rect class="st76" x="3460.27" y="1039.16" width="500" height="440" rx="4" ry="4"/>
+    <text class="st27" transform="translate(3484.27 1069.16)"><tspan x="0" y="0">COLOR PALETTE</tspan></text>
+    <circle class="st92" cx="3508.27" cy="1105.16" r="24"/>
+    <text class="st11" transform="translate(3499.6 1143.16)"><tspan x="0" y="0">Dark</tspan></text>
+    <text class="st66" transform="translate(3494.26 1155.16)"><tspan x="0" y="0">#1A1916</tspan></text>
+    <circle class="st79" cx="3570.27" cy="1105.16" r="24"/>
+    <text class="st11" transform="translate(3562.64 1143.16)"><tspan x="0" y="0">Text</tspan></text>
+    <text class="st66" transform="translate(3556.26 1155.16)"><tspan x="0" y="0">#2A2825</tspan></text>
+    <circle class="st70" cx="3632.27" cy="1105.16" r="24"/>
+    <text class="st11" transform="translate(3619.9 1143.16)"><tspan x="0" y="0">Text Lt</tspan></text>
+    <text class="st66" transform="translate(3618.26 1155.16)"><tspan x="0" y="0">#6B6860</tspan></text>
+    <circle class="st71" cx="3694.27" cy="1105.16" r="24"/>
+    <text class="st11" transform="translate(3687.31 1143.16)"><tspan x="0" y="0">Mid</tspan></text>
+    <text class="st66" transform="translate(3678.9 1155.16)"><tspan x="0" y="0">#B0ADA5</tspan></text>
+    <circle class="st83" cx="3756.27" cy="1105.16" r="24"/>
+    <text class="st11" transform="translate(3747.01 1143.16)"><tspan x="0" y="0">Light</tspan></text>
+    <text class="st66" transform="translate(3741.48 1155.16)"><tspan x="0" y="0">#E8E6E0</tspan></text>
+    <circle class="st81" cx="3818.27" cy="1105.16" r="24"/>
+    <text class="st11" transform="translate(3804.27 1143.16)"><tspan x="0" y="0">Off Wht</tspan></text>
+    <text class="st66" transform="translate(3804.07 1155.16)"><tspan x="0" y="0">#F5F4F0</tspan></text>
+    <circle class="st82" cx="3880.27" cy="1105.16" r="24"/>
+    <text class="st11" transform="translate(3867.3 1143.16)"><tspan x="0" y="0">Accent</tspan></text>
+    <text class="st66" transform="translate(3865.68 1155.16)"><tspan x="0" y="0">#C8442A</tspan></text>
+    <text class="st26" transform="translate(3484.27 1189.16)"><tspan x="0" y="0">TYPOGRAPHY</tspan></text>
+    <text class="st48" transform="translate(3484.27 1231.16)"><tspan x="0" y="0">Aa</tspan></text>
+    <text class="st21" transform="translate(3484.27 1249.16)"><tspan x="0" y="0">Inter / Light 300</tspan></text>
+    <text class="st13" transform="translate(3484.27 1263.16)"><tspan x="0" y="0">Primary typeface — headings &amp; body</tspan></text>
+    <text class="st25" transform="translate(3660.27 1231.16)"><tspan x="0" y="0">Aa</tspan></text>
+    <text class="st21" transform="translate(3660.27 1249.16)"><tspan x="0" y="0">Georgia / Italic</tspan></text>
+    <text class="st13" transform="translate(3660.27 1263.16)"><tspan x="0" y="0">Accent — quotes &amp; editorial</tspan></text>
+    <text class="st26" transform="translate(3484.27 1299.16)"><tspan x="0" y="0">BUTTONS</tspan></text>
+    <rect class="st92" x="3484.27" y="1313.16" width="100" height="32"/>
+    <text class="st36" transform="translate(3506.93 1333.16)"><tspan x="0" y="0">PRIMARY</tspan></text>
+    <rect class="st73" x="3596.27" y="1313.16" width="110" height="32"/>
+    <text class="st9" transform="translate(3614.43 1333.16)"><tspan x="0" y="0">SECONDARY</tspan></text>
+    <rect class="st82" x="3718.27" y="1313.16" width="100" height="32"/>
+    <text class="st36" transform="translate(3744.02 1333.16)"><tspan x="0" y="0">ACCENT</tspan></text>
+    <text class="st26" transform="translate(3484.27 1379.16)"><tspan x="0" y="0">SPACING SCALE</tspan></text>
+    <g>
+      <rect class="st91" x="3484.27" y="1451.16" width="30" height="8"/>
+      <text class="st66" transform="translate(3497.32 1471.16)"><tspan x="0" y="0">4</tspan></text>
+      <rect class="st91" x="3524.27" y="1443.16" width="30" height="16"/>
+      <text class="st66" transform="translate(3537.32 1471.16)"><tspan x="0" y="0">8</tspan></text>
+      <rect class="st91" x="3564.27" y="1435.16" width="30" height="24"/>
+      <text class="st66" transform="translate(3575.38 1471.16)"><tspan x="0" y="0">12</tspan></text>
+      <rect class="st91" x="3604.27" y="1427.16" width="30" height="32"/>
+      <text class="st66" transform="translate(3615.38 1471.16)"><tspan x="0" y="0">16</tspan></text>
+      <rect class="st91" x="3644.27" y="1411.16" width="30" height="48"/>
+      <text class="st66" transform="translate(3655.38 1471.16)"><tspan x="0" y="0">24</tspan></text>
+      <rect class="st91" x="3684.27" y="1403.16" width="30" height="56"/>
+      <text class="st66" transform="translate(3695.38 1471.16)"><tspan x="0" y="0">32</tspan></text>
+      <rect class="st91" x="3724.27" y="1391.16" width="30" height="68"/>
+      <text class="st66" transform="translate(3735.38 1471.16)"><tspan x="0" y="0">48</tspan></text>
+      <rect class="st91" x="3764.27" y="1379.16" width="30" height="80"/>
+      <text class="st66" transform="translate(3775.38 1471.16)"><tspan x="0" y="0">64</tspan></text>
+    </g>
+  </g>
+  <rect class="st92" y="1640" width="4200" height="50"/>
+  <text class="st16" transform="translate(30 1670)"><tspan x="0" y="0">MAX MCDONOUGH — EMILY CARR UNIVERSITY OF ART + DESIGN — MARCH 2026</tspan></text>
+  <text class="st43" transform="translate(4043.21 1670)"><tspan x="0" y="0">&quot;Weniger, aber besser.&quot;</tspan></text>
+</svg>
