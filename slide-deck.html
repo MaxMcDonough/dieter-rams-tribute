@@ -1,0 +1,2515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Slide Deck · Dieter Rams Tribute · Max McDonough · INTD-215</title>
+  <style>
+    /* ================================================================
+       SLIDE DECK · 16:9 landscape · Comprehensive · ~34 slides
+       A designer's tribute to Dieter Rams
+       Max McDonough · INTD-215 Designing for Screens · Spring 2026
+       ================================================================ */
+    @page { size: 13.333in 7.5in; margin: 0; }
+    @page:first { size: 13.333in 7.5in; margin: 0; }
+
+    :root {
+      --white: #ffffff;
+      --off-white: #f4f2ed;
+      --light: #e6e3dc;
+      --mid: #a8a49b;
+      --dark: #141311;
+      --text: #242220;
+      --text-light: #5c5952;
+      --accent: #c73d28;
+      --accent-hot: #ff5a3c;
+      --grey: #8f8a82;
+      --font-sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+      --font-serif: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+      --font-mono: "IBM Plex Mono", "Courier New", monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { font-family: var(--font-sans); color: var(--text); line-height: 1.5; }
+
+    .slide {
+      width: 13.333in;
+      height: 7.5in;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+      padding: 0.6in 0.75in;
+      background: var(--off-white);
+    }
+    .slide:last-child { page-break-after: auto; }
+
+    /* Chrome */
+    .chrome-top, .chrome-bot {
+      position: absolute;
+      left: 0.75in;
+      right: 0.75in;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      font-variant-numeric: tabular-nums;
+      z-index: 10;
+    }
+    .chrome-top { top: 0.35in; }
+    .chrome-bot { bottom: 0.35in; }
+    .chrome-mark {
+      font-size: 10pt;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: lowercase;
+      color: var(--text);
+      position: relative;
+    }
+    .chrome-mark::before {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 1px;
+      background: var(--accent);
+    }
+    .chrome-accent { color: var(--accent); }
+    .chrome-led {
+      display: inline-block;
+      width: 6pt;
+      height: 6pt;
+      border-radius: 50%;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-right: 4pt;
+    }
+
+    .body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding-top: 0.3in;
+      padding-bottom: 0.3in;
+      z-index: 2;
+    }
+
+    /* Dark variant */
+    .slide--dark { background: var(--dark); color: var(--white); }
+    .slide--dark .chrome-top, .slide--dark .chrome-bot { color: var(--grey); }
+    .slide--dark .chrome-mark { color: var(--white); }
+
+    /* Grille overlay */
+    .slide--grille::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 50%, rgba(199, 61, 40, 0.06), transparent 55%),
+        repeating-linear-gradient(90deg, transparent 0 47px, rgba(255,255,255,0.02) 47px 48px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Typography primitives */
+    .eyebrow {
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+      display: inline-flex;
+      align-items: center;
+      gap: 12pt;
+      margin-bottom: 0.18in;
+    }
+    .eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32pt;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .title-sans {
+      font-family: var(--font-sans);
+      font-weight: 200;
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+      color: var(--text);
+    }
+    .slide--dark .title-sans { color: var(--white); }
+
+    .title-serif {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      color: var(--text);
+    }
+    .slide--dark .title-serif { color: var(--white); }
+
+    .accent { color: var(--accent); }
+    em.accent { font-style: italic; font-family: var(--font-serif); font-weight: 400; }
+
+    p { font-size: 11pt; line-height: 1.55; color: var(--text-light); }
+    .slide--dark p { color: rgba(255,255,255,0.62); }
+
+    .lead { font-size: 13pt; line-height: 1.5; font-weight: 300; color: var(--text); }
+    .slide--dark .lead { color: rgba(255,255,255,0.78); }
+
+    .caption {
+      font-size: 8.5pt;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      font-variant-numeric: tabular-nums;
+    }
+    .slide--dark .caption { color: var(--grey); }
+
+    strong { color: var(--text); font-weight: 600; }
+    .slide--dark strong { color: var(--white); }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 9pt;
+      color: var(--accent);
+      background: rgba(0,0,0,0.04);
+      padding: 1pt 4pt;
+      border-radius: 2px;
+    }
+    .slide--dark code {
+      background: rgba(255,255,255,0.06);
+    }
+
+    kbd {
+      display: inline-block;
+      padding: 1pt 6pt;
+      font-family: var(--font-mono);
+      font-size: 9pt;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white);
+      border-radius: 2px;
+      font-weight: 500;
+    }
+    .slide:not(.slide--dark) kbd {
+      background: var(--light);
+      border-color: var(--mid);
+      color: var(--text);
+    }
+
+    /* Cover */
+    .cover .body {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 0.25in;
+    }
+    .cover-eyebrow {
+      font-size: 10pt;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 14pt;
+    }
+    .cover-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 40pt;
+      height: 1px;
+      background: var(--accent);
+    }
+    .cover-title {
+      font-family: var(--font-sans);
+      font-weight: 200;
+      font-size: 110pt;
+      letter-spacing: -0.055em;
+      line-height: 0.85;
+      color: var(--white);
+    }
+    .cover-title em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+    .cover-sub {
+      font-size: 16pt;
+      line-height: 1.3;
+      color: rgba(255,255,255,0.62);
+      max-width: 8in;
+      font-weight: 300;
+    }
+    .cover-meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.3in;
+      padding-top: 0.2in;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      align-items: baseline;
+    }
+    .cover-meta dt {
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 4pt;
+    }
+    .cover-meta dd { font-size: 11pt; color: rgba(255,255,255,0.82); }
+
+    /* Quote slides */
+    .quote-slide .body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .quote-mark {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 44pt;
+      color: var(--accent);
+      line-height: 0.5;
+      margin-bottom: 0.2in;
+    }
+    .quote-text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 32pt;
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      max-width: 10in;
+      font-weight: 400;
+      margin-bottom: 0.3in;
+    }
+    .slide--dark .quote-text { color: var(--white); }
+    .quote-attr {
+      font-size: 10pt;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mid);
+      font-variant-numeric: tabular-nums;
+    }
+    .slide--dark .quote-attr { color: var(--grey); }
+
+    /* Section title slide (giant roman numeral divider) */
+    .divider .body {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 0.5in;
+      height: 100%;
+    }
+    .divider-roman {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 260pt;
+      line-height: 0.85;
+      color: var(--accent);
+      font-weight: 400;
+      letter-spacing: -0.05em;
+    }
+    .divider h2 {
+      font-family: var(--font-serif);
+      font-size: 52pt;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1;
+      margin-bottom: 0.15in;
+      color: var(--white);
+    }
+    .divider-sub {
+      font-size: 14pt;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.62);
+      max-width: 7in;
+      font-weight: 300;
+    }
+    .divider-track {
+      font-size: 10pt;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--grey);
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Two-column */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 0.7in;
+      height: 100%;
+      align-items: center;
+    }
+
+    /* Lineage diagram */
+    .lineage {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0.3in;
+      align-items: center;
+      margin: 0.25in 0;
+    }
+    .lineage-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.28in 0.32in;
+      display: grid;
+      gap: 0.12in;
+      min-height: 2.3in;
+    }
+    .lineage-card-tag {
+      font-size: 8.5pt;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+    }
+    .lineage-card-product {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 30pt;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+    .lineage-card-meta {
+      font-size: 9.5pt;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.62);
+    }
+    .lineage-arrow {
+      font-family: var(--font-sans);
+      font-size: 56pt;
+      color: var(--accent);
+      font-weight: 200;
+      line-height: 1;
+    }
+    .lineage-gap {
+      text-align: center;
+      font-size: 8.5pt;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-top: 4pt;
+    }
+
+    /* Metric grid */
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.15in;
+      margin-top: 0.22in;
+    }
+    .metric {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.2in 0.25in;
+      display: grid;
+      gap: 0.1in;
+    }
+    .slide:not(.slide--dark) .metric {
+      background: var(--white);
+      border-color: var(--light);
+    }
+    .metric-value {
+      font-family: var(--font-sans);
+      font-size: 38pt;
+      font-weight: 200;
+      letter-spacing: -0.04em;
+      line-height: 0.9;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+    .metric-label {
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid);
+      font-variant-numeric: tabular-nums;
+    }
+    .slide--dark .metric-label { color: var(--grey); }
+    .metric-sub {
+      font-size: 9pt;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+    .slide--dark .metric-sub { color: rgba(255,255,255,0.48); }
+
+    /* Phase cards */
+    .phases {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-top: 0.2in;
+    }
+    .phase {
+      background: rgba(255,255,255,0.015);
+      padding: 0.22in 0.22in 0.25in;
+      display: grid;
+      gap: 0.08in;
+      align-content: start;
+    }
+    .phase-tag {
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+    }
+    .phase-title {
+      font-family: var(--font-sans);
+      font-size: 14pt;
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: -0.015em;
+      line-height: 1.1;
+    }
+    .phase-desc {
+      font-size: 8.5pt;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.55);
+    }
+    .phase-tools {
+      margin-top: 0.06in;
+      padding-top: 0.08in;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.38);
+    }
+
+    /* Mini ET 66 calculator */
+    .calc-mini {
+      width: 4.5in;
+      background: linear-gradient(180deg, #1f1d1a 0%, #15140f 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 0.18in;
+    }
+    .calc-mini-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 4pt 10pt 10pt;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      font-size: 7.5pt;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.42);
+    }
+    .calc-mini-top span:first-child {
+      font-size: 10pt;
+      text-transform: lowercase;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      position: relative;
+    }
+    .calc-mini-top span:first-child::before {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 1px;
+      background: var(--accent);
+    }
+    .calc-mini-screen {
+      background: #0e0d0a;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 3px;
+      margin: 0.12in 0;
+      padding: 0.18in;
+      min-height: 1.1in;
+      display: grid;
+      align-content: center;
+      gap: 0.06in;
+    }
+    .calc-mini-num {
+      font-family: var(--font-sans);
+      font-size: 28pt;
+      font-weight: 200;
+      color: var(--accent);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    .calc-mini-title {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 15pt;
+      color: var(--white);
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+    }
+    .calc-mini-keys {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4pt;
+    }
+    .calc-mini-key {
+      background: linear-gradient(180deg, #2c2926 0%, #1a1815 100%);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-bottom-color: rgba(0,0,0,0.55);
+      border-radius: 3px;
+      padding: 8pt 11pt;
+      height: 48pt;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .calc-mini-key-num {
+      font-size: 16pt;
+      font-weight: 300;
+      color: rgba(255,255,255,0.85);
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .calc-mini-key-tag {
+      font-size: 6.5pt;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.42);
+    }
+    .calc-mini-key--equals {
+      background: linear-gradient(180deg, #d8472f 0%, #a8311e 100%);
+      border-color: rgba(255,255,255,0.18);
+    }
+    .calc-mini-key--equals .calc-mini-key-num,
+    .calc-mini-key--equals .calc-mini-key-tag { color: var(--white); }
+
+    /* Mini T 1000 dial */
+    .dial-mini {
+      background: linear-gradient(180deg, #1f1d1a 0%, #15140f 100%);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 4px;
+      padding: 0.18in;
+      max-width: 5in;
+    }
+    .dial-mini-window {
+      background: #0e0d0a;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 3px;
+      padding: 0.18in 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      gap: 0.25in;
+      overflow: hidden;
+    }
+    .dial-mini-window::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: var(--accent);
+      box-shadow: 0 0 10pt rgba(199,61,40,0.6);
+    }
+    .dial-mini-year {
+      font-family: var(--font-sans);
+      font-size: 16pt;
+      font-weight: 300;
+      color: rgba(255,255,255,0.3);
+      font-variant-numeric: tabular-nums;
+    }
+    .dial-mini-year.on {
+      color: var(--accent);
+      font-size: 20pt;
+    }
+    .dial-mini-bottom {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.2in;
+      align-items: center;
+      margin-top: 0.1in;
+      padding-top: 0.1in;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .dial-mini-knob {
+      width: 32pt; height: 32pt; border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #2c2926, #0e0d0a);
+      border: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+    }
+    .dial-mini-knob::before {
+      content: '';
+      position: absolute;
+      top: 3pt; left: 50%;
+      width: 2px; height: 8pt;
+      background: var(--accent);
+      transform: translateX(-50%);
+    }
+    .dial-mini-readout {
+      font-size: 8pt;
+      color: rgba(255,255,255,0.7);
+    }
+    .dial-mini-readout strong {
+      color: var(--accent);
+      font-size: 13pt;
+      font-weight: 300;
+      font-variant-numeric: tabular-nums;
+      display: block;
+    }
+
+    /* Site map grid */
+    .sitemap {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.12in;
+      margin-top: 0.22in;
+    }
+    .sitemap-node {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 0.18in 0.18in 0.22in;
+      display: grid;
+      gap: 0.06in;
+      position: relative;
+      min-height: 2.4in;
+    }
+    .slide:not(.slide--dark) .sitemap-node {
+      background: var(--white);
+      border-color: var(--light);
+    }
+    .sitemap-node-num {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 26pt;
+      color: var(--accent);
+      line-height: 0.85;
+      letter-spacing: -0.04em;
+    }
+    .sitemap-node-tag {
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--mid);
+      font-variant-numeric: tabular-nums;
+    }
+    .slide--dark .sitemap-node-tag { color: var(--grey); }
+    .sitemap-node-name {
+      font-size: 12pt;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-top: 0.04in;
+    }
+    .slide--dark .sitemap-node-name { color: var(--white); }
+    .sitemap-node-instrument {
+      font-size: 8pt;
+      color: var(--text-light);
+      line-height: 1.45;
+      font-style: italic;
+    }
+    .slide--dark .sitemap-node-instrument { color: rgba(255,255,255,0.52); }
+    .sitemap-node-file {
+      font-family: var(--font-mono);
+      font-size: 7.5pt;
+      color: var(--accent);
+      margin-top: 0.06in;
+      padding-top: 0.06in;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+    .slide--dark .sitemap-node-file {
+      border-top-color: rgba(255,255,255,0.08);
+    }
+
+    /* Instrument row for Chapter IV */
+    .instr-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.15in;
+      margin-top: 0.2in;
+    }
+    .instr-box {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.18in 0.2in;
+      display: grid;
+      gap: 0.08in;
+      min-height: 2in;
+    }
+    .instr-box-ch {
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+    }
+    .instr-box-value {
+      font-family: var(--font-sans);
+      font-size: 32pt;
+      font-weight: 200;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+    .instr-box-name {
+      font-size: 10pt;
+      font-weight: 500;
+      color: var(--white);
+      margin-top: 0.06in;
+    }
+    .instr-box-meta {
+      font-size: 8pt;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.5;
+    }
+    .mini-led-row {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 3pt;
+      margin-top: 0.08in;
+    }
+    .mini-led {
+      height: 10pt;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 4pt rgba(199,61,40,0.6);
+    }
+    .mini-bars {
+      display: flex;
+      gap: 3pt;
+      align-items: end;
+      height: 32pt;
+      margin-top: 0.08in;
+    }
+    .mini-bars span {
+      flex: 1;
+      background: var(--accent);
+      opacity: 0.9;
+    }
+
+    /* Corner brackets */
+    .corners span {
+      position: absolute;
+      width: 14pt;
+      height: 14pt;
+      border: 1px solid var(--accent);
+      z-index: 5;
+    }
+    .corners span:nth-child(1) { top: 0.4in; left: 0.55in; border-right: none; border-bottom: none; }
+    .corners span:nth-child(2) { top: 0.4in; right: 0.55in; border-left: none; border-bottom: none; }
+    .corners span:nth-child(3) { bottom: 0.4in; left: 0.55in; border-right: none; border-top: none; }
+    .corners span:nth-child(4) { bottom: 0.4in; right: 0.55in; border-left: none; border-top: none; }
+
+    /* Decl rows */
+    .decl-row {
+      display: grid;
+      grid-template-columns: 2.3in 1fr;
+      gap: 0.25in;
+      padding: 0.1in 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      align-items: baseline;
+    }
+    .decl-row:first-of-type { border-top: none; padding-top: 0; }
+    .decl-label {
+      font-size: 8.5pt;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .decl-value {
+      font-size: 9.5pt;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.55;
+    }
+
+    /* Closing mantra */
+    .mantra .body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .mantra-line {
+      font-family: var(--font-sans);
+      font-size: 120pt;
+      font-weight: 200;
+      letter-spacing: -0.055em;
+      line-height: 0.88;
+      color: var(--white);
+      margin: 0;
+    }
+    .mantra-line em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+    .mantra-sub {
+      font-size: 13pt;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.42);
+      margin: 0.15in 0 0 0;
+    }
+    .mantra-attr {
+      font-size: 10pt;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+      margin: 0.25in 0 0 0;
+    }
+
+    /* Grids */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.4in; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.3in; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.25in; }
+
+    /* Stack rows (monospace spec lists) */
+    .stack {
+      display: grid;
+      gap: 0.08in;
+      margin-top: 0.18in;
+    }
+    .stack-row {
+      display: grid;
+      grid-template-columns: 1.4in 1fr;
+      gap: 0.2in;
+      padding: 0.07in 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      align-items: baseline;
+    }
+    .slide:not(.slide--dark) .stack-row { border-top-color: rgba(0,0,0,0.06); }
+    .stack-row:first-child { border-top: none; padding-top: 0; }
+    .stack-label {
+      font-size: 8.5pt;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--mid);
+      font-variant-numeric: tabular-nums;
+    }
+    .stack-value {
+      font-family: var(--font-mono);
+      font-size: 10pt;
+      color: var(--text);
+    }
+    .slide--dark .stack-value { color: rgba(255,255,255,0.85); }
+
+    /* Toc list — flex-based so long part labels don't collide */
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 0.5in;
+      margin-top: 0.3in;
+    }
+    .toc-row {
+      display: flex;
+      gap: 0.15in;
+      padding: 0.1in 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      align-items: baseline;
+    }
+    .toc-num {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 14pt;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+      width: 28pt;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .toc-part {
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--grey);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      width: 92pt;
+      line-height: 1.3;
+    }
+    .toc-name {
+      font-size: 10pt;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.45;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .bullets {
+      list-style: none;
+      margin-top: 0.15in;
+    }
+    .bullets li {
+      font-size: 10pt;
+      line-height: 1.55;
+      color: var(--text-light);
+      padding: 4pt 0 4pt 14pt;
+      position: relative;
+    }
+    .slide--dark .bullets li { color: rgba(255,255,255,0.62); }
+    .bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* Accent rule */
+    .hr-accent {
+      width: 32pt;
+      height: 1px;
+      background: var(--accent);
+      margin: 0.2in 0;
+    }
+
+    /* File tree */
+    .tree {
+      font-family: var(--font-mono);
+      font-size: 9pt;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.7);
+    }
+    .tree-line { display: block; }
+    .tree-line .accent { color: var(--accent); }
+    .tree-line .dim { color: rgba(255,255,255,0.3); }
+
+    /* Keyboard grid — flex cell handles compound keys */
+    .keygrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.18in 0.3in;
+      margin-top: 0.22in;
+    }
+    .keygrid-cell {
+      display: flex;
+      gap: 0.1in;
+      align-items: baseline;
+      padding: 0.08in 0;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .slide--dark .keygrid-cell { border-top-color: rgba(255,255,255,0.08); }
+    .keygrid-cell:nth-child(-n+3) { border-top: none; }
+    .keygrid-cell-keys {
+      display: inline-flex;
+      gap: 4pt;
+      align-items: baseline;
+      flex-shrink: 0;
+      min-width: 50pt;
+    }
+    .keygrid-cell-label {
+      font-size: 10.5pt;
+      color: var(--text-light);
+      line-height: 1.35;
+      flex: 1;
+    }
+    .slide--dark .keygrid-cell-label { color: rgba(255,255,255,0.78); }
+
+    /* Color swatches — chip + fixed-width hex + flexible description */
+    .swatches {
+      display: grid;
+      gap: 7pt;
+      margin-top: 0.15in;
+    }
+    .swatch {
+      display: grid;
+      grid-template-columns: 18pt 72pt 1fr;
+      gap: 12pt;
+      align-items: center;
+      font-size: 9pt;
+      color: var(--text);
+    }
+    .slide--dark .swatch { color: rgba(255,255,255,0.82); }
+    .swatch-chip {
+      width: 18pt;
+      height: 18pt;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    .slide--dark .swatch-chip { border-color: rgba(255,255,255,0.15); }
+    .swatch-hex {
+      font-family: var(--font-mono);
+      font-size: 9pt;
+    }
+    .swatch-desc {
+      font-size: 9pt;
+      color: var(--grey);
+      line-height: 1.5;
+    }
+
+    /* Component cards for plugins */
+    .plugin {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 0.22in 0.24in;
+      display: grid;
+      gap: 0.08in;
+    }
+    .plugin-num {
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--accent);
+      font-variant-numeric: tabular-nums;
+    }
+    .plugin-name {
+      font-size: 12pt;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: -0.01em;
+    }
+    .plugin-desc {
+      font-size: 9pt;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.55;
+    }
+    .plugin-status {
+      margin-top: 0.04in;
+      padding-top: 0.06in;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 7.5pt;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.42);
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ========================================================================
+     PART I · OPEN
+     ======================================================================== -->
+
+<!-- 01 · COVER -->
+<section class="slide slide--dark cover slide--grille">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Slide Deck · v2.0 · 2026.04 · 35 slides</span>
+  </div>
+  <div class="body">
+    <span class="cover-eyebrow">A designer's tribute to Dieter Rams</span>
+    <div>
+      <h1 class="cover-title">Less,<br><em>but better.</em></h1>
+      <p class="cover-sub">Research, design, and four build phases of a six-page editorial tribute to the work and ten principles of Dieter Rams. From a hand-coded white page to a multi-chapter Braun catalogue.</p>
+    </div>
+    <dl class="cover-meta">
+      <div><dt>Author</dt><dd>Max McDonough</dd></div>
+      <div><dt>Course</dt><dd>INTD-215 Designing for Screens</dd></div>
+      <div><dt>Instructor</dt><dd>Colby May</dd></div>
+      <div><dt>Term</dt><dd>Spring 2026 · Final Project</dd></div>
+    </dl>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>REC · Final Project</span>
+    <span class="chrome-accent">01 / 35</span>
+  </div>
+</section>
+
+<!-- 02 · OPENING QUOTE -->
+<section class="slide slide--dark quote-slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part One · Open</span>
+  </div>
+  <div class="body">
+    <span class="quote-mark">“</span>
+    <p class="quote-text">I believe designers should eliminate the unnecessary. That means products should be neither more nor less than what they need to be.</p>
+    <span class="quote-attr">— Dieter Rams</span>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 02</span>
+    <span class="chrome-accent">02 / 35</span>
+  </div>
+</section>
+
+<!-- 03 · LIVE PROJECT URL -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part One · Live Project</span>
+  </div>
+  <div class="body" style="display: flex; flex-direction: column; justify-content: center; gap: 0.14in;">
+    <span class="eyebrow" style="margin-bottom: 0;">Read it live</span>
+    <h2 class="title-serif" style="font-size: 40pt; margin-bottom: 0; line-height: 1;">The site is on the&nbsp;internet.</h2>
+    <p style="font-size: 11pt; line-height: 1.4; color: var(--text); max-width: 10in; margin-bottom: 0;">Deployed to GitHub Pages. Open any chapter, use the keyboard shortcuts, press the orange equals key, scroll the timeline dial. It all works.</p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.2in; margin-top: 0.05in;">
+      <div style="padding: 0.2in 0.24in; background: var(--dark); color: var(--white); border-left: 3px solid var(--accent);">
+        <span style="font-size: 8pt; font-weight: 600; letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; display: block; margin-bottom: 0.06in;">Live site</span>
+        <code style="font-family: var(--font-mono); font-size: 12pt; color: var(--white); background: transparent; padding: 0; display: block; word-break: break-all; line-height: 1.25;">maxmcdonough.github.io/<br>dieter-rams-tribute</code>
+        <p style="font-size: 8.5pt; color: rgba(255,255,255,0.55); margin-top: 0.08in; line-height: 1.4;">All five chapters · keyboard nav · fully responsive.</p>
+      </div>
+      <div style="padding: 0.2in 0.24in; background: var(--white); border: 1px solid var(--light);">
+        <span style="font-size: 8pt; font-weight: 600; letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; display: block; margin-bottom: 0.06in;">Source code</span>
+        <code style="font-family: var(--font-mono); font-size: 12pt; color: var(--text); background: transparent; padding: 0; display: block; word-break: break-all; line-height: 1.25;">github.com/maxmcdonough/<br>dieter-rams-tribute</code>
+        <p style="font-size: 8.5pt; color: var(--text-light); margin-top: 0.08in; line-height: 1.4;">Public · snapshots preserved in <code>_process_snapshots/</code>.</p>
+      </div>
+    </div>
+
+    <p style="font-size: 9pt; color: var(--mid); margin-top: 0.06in; font-style: italic;">Deployed via <code>deploy.sh</code> · one-command setup · GitHub Pages serves from main branch root.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 03</span>
+    <span class="chrome-accent">03 / 35</span>
+  </div>
+</section>
+
+<!-- 03 · ROADMAP / CONTENTS -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Deck Roadmap</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Contents</span>
+    <h2 class="title-sans" style="font-size: 40pt; margin-bottom: 0.2in;">Thirty-five slides,<br>in ten parts.</h2>
+
+    <ol class="toc-list">
+      <li class="toc-row"><span class="toc-num">I</span><span class="toc-part">Open</span><span class="toc-name">Cover · Thesis · Roadmap · 01 — 04</span></li>
+      <li class="toc-row"><span class="toc-num">II</span><span class="toc-part">Why Rams</span><span class="toc-name">Selection · Lineage · Takeaways · 05 — 07</span></li>
+      <li class="toc-row"><span class="toc-num">III</span><span class="toc-part">Thesis</span><span class="toc-name">The argument · Deliverable · 08 — 09</span></li>
+      <li class="toc-row"><span class="toc-num">IV</span><span class="toc-part">Research</span><span class="toc-name">UX artefacts · What survived · 10 — 11</span></li>
+      <li class="toc-row"><span class="toc-num">V</span><span class="toc-part">Design System</span><span class="toc-name">Type · Colour · Grid · Devices · 12 — 15</span></li>
+      <li class="toc-row"><span class="toc-num">VI</span><span class="toc-part">Build Phases</span><span class="toc-name">Four phases, one timeline · 16 — 20</span></li>
+      <li class="toc-row"><span class="toc-num">VII</span><span class="toc-part">Walkthrough</span><span class="toc-name">Cover + 5 chapters · 21 — 29</span></li>
+      <li class="toc-row"><span class="toc-num">VIII</span><span class="toc-part">Craft</span><span class="toc-name">Stack · Keyboard · Metrics · 30 — 32</span></li>
+      <li class="toc-row"><span class="toc-num">IX</span><span class="toc-part">Reflection</span><span class="toc-name">What I learned · Slide 33</span></li>
+      <li class="toc-row"><span class="toc-num">X</span><span class="toc-part">Declaration</span><span class="toc-name">Honest accounting · Closing · 34 — 35</span></li>
+    </ol>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 04</span>
+    <span class="chrome-accent">04 / 35</span>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PART II · WHY DIETER RAMS
+     ======================================================================== -->
+
+<!-- 04 · WHY RAMS -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part II · Selection</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">II · Why Dieter Rams</span>
+    <h2 class="title-serif" style="font-size: 56pt; margin-bottom: 0.2in;">No shortlist.</h2>
+    <p class="lead" style="max-width: 10in; margin-bottom: 0.3in;">The minute the brief asked for a designer who shaped how I think about the work, the answer was Rams.</p>
+
+    <div class="grid-2" style="max-width: 11.5in;">
+      <div>
+        <span class="caption" style="display:block; margin-bottom:0.1in;">The entry point</span>
+        <p style="font-size: 10.5pt;">I came to Rams through Apple. Before I knew his name, I knew the iPod's click wheel, the iMac G4's swivel arm, the iPhone's calculator. When I learned Jonathan Ive had cited Rams as his single greatest influence for two decades, the connection clicked.</p>
+        <p style="font-size: 10.5pt; margin-top: 0.12in;">The 1958 T 3 radio → the 2001 iPod. The 1987 ET 66 calculator → iOS Calculator in 2008. The same keypad logic, forty-three years apart.</p>
+      </div>
+      <div>
+        <span class="caption" style="display:block; margin-bottom:0.1in;">Why his framework, specifically</span>
+        <p style="font-size: 10.5pt;">Rams's ten principles, written in 1976, remain the closest the field of industrial design has ever come to an ethical compass. Not a style. Not a movement. A <em>test</em>.</p>
+        <p style="font-size: 10.5pt; margin-top: 0.12in; padding: 0.1in 0.15in; border-left: 2px solid var(--accent); background: var(--white); font-family: var(--font-serif); font-style: italic; color: var(--text);">"Is my design good design?" — and a way to answer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 05</span>
+    <span class="chrome-accent">05 / 35</span>
+  </div>
+</section>
+
+<!-- 05 · THE LINEAGE -->
+<section class="slide slide--dark slide--grille">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part II · The Lineage, In Two Objects</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">The Lineage</span>
+    <h2 class="title-sans" style="font-size: 42pt; margin-bottom: 0.2in;">Same keypad. <em class="accent">Forty-three years apart.</em></h2>
+
+    <div class="lineage">
+      <div class="lineage-card">
+        <span class="lineage-card-tag">Braun · 1958</span>
+        <span class="lineage-card-product">T 3<br>Pocket Radio</span>
+        <span class="lineage-card-meta">The first pocket transistor radio to refuse a knob. A perforated speaker grille became the entire face. Sliding power switch, recessed dial — nothing else.</span>
+      </div>
+      <div>
+        <div class="lineage-arrow">→</div>
+        <div class="lineage-gap">43 years</div>
+      </div>
+      <div class="lineage-card">
+        <span class="lineage-card-tag">Apple · 2001</span>
+        <span class="lineage-card-product">iPod<br>1st Generation</span>
+        <span class="lineage-card-meta">White plastic face, centred circular control, recessed screen. Jonathan Ive has repeatedly cited the T 3 as the direct ancestor.</span>
+      </div>
+    </div>
+
+    <p style="text-align: center; font-size: 9.5pt; color: rgba(255,255,255,0.48); margin-top: 0.25in; font-style: italic;">The lineage repeats across the catalogue: ET 66 → iOS Calculator (2008) · L 2 Speaker → HomePod (2018) · 606 Shelving → Apple Park interiors.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 06</span>
+    <span class="chrome-accent">06 / 35</span>
+  </div>
+</section>
+
+<!-- 06 · WHAT I'VE INTERNALISED -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part II · What I've Internalised</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Personal Influence on Practice</span>
+    <h2 class="title-serif" style="font-size: 44pt; margin-bottom: 0.3in;">Three things from Rams<br>I now carry in my work.</h2>
+
+    <div class="grid-3">
+      <div style="padding: 0.22in 0.25in; background: var(--white); border: 1px solid var(--light);">
+        <span class="caption accent" style="display:block; color: var(--accent); margin-bottom: 0.1in;">01 · Testable restraint</span>
+        <p style="font-size: 10.5pt;">"Less, but better" isn't a feeling. You can audit a design against the ten principles and get a verdict. Changes how I critique my own work. Every project this year has gotten shorter, quieter, more specific because of him.</p>
+      </div>
+      <div style="padding: 0.22in 0.25in; background: var(--white); border: 1px solid var(--light);">
+        <span class="caption accent" style="display:block; color: var(--accent); margin-bottom: 0.1in;">02 · Form is inventory</span>
+        <p style="font-size: 10.5pt;">The SK 4's clear lid in 1956 was radical because it refused to hide what was inside. Good design shows the user what they own. I think about that every time I'm tempted to disguise a UI.</p>
+      </div>
+      <div style="padding: 0.22in 0.25in; background: var(--white); border: 1px solid var(--light);">
+        <span class="caption accent" style="display:block; color: var(--accent); margin-bottom: 0.1in;">03 · Long-lasting is praise</span>
+        <p style="font-size: 10.5pt;">The 606 shelf has been in continuous production since 1960. The 620 chair since 1962. The opposite of the throwaway design economy. The brief I want my own work to meet.</p>
+      </div>
+    </div>
+
+    <p style="max-width: 11in; margin-top: 0.3in; font-style: italic; font-family: var(--font-serif); font-size: 12pt; color: var(--text);">So this project isn't only documentation. It's the longest I've spent inside one designer's head, deliberately — and the site is the artefact of that residency.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 07</span>
+    <span class="chrome-accent">07 / 35</span>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PART III · THE THESIS
+     ======================================================================== -->
+
+<!-- 07 · THE THESIS -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part III · The Thesis</span>
+  </div>
+  <div class="body" style="display: flex; flex-direction: column; justify-content: center;">
+    <span class="eyebrow">The Thesis</span>
+    <h2 class="title-serif" style="font-size: 76pt; margin-bottom: 0.3in; max-width: 11in;">Good design is <em class="accent">testable.</em></h2>
+    <p class="lead" style="max-width: 11in; margin-bottom: 0.2in;">If the work is the proof of the principles, the medium that documents the work should be the same proof — scaled to the screen.</p>
+    <p style="max-width: 11in;">The site I built doesn't only describe Rams's principles. It tries to <strong>embody</strong> them. Every interactive section is built around an actual Braun product as its interface metaphor — the calculator, the tuning dial, the studio meter, the hi-fi rack. The metaphor isn't decoration. It's the navigation.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 08</span>
+    <span class="chrome-accent">08 / 35</span>
+  </div>
+</section>
+
+<!-- 08 · WHAT WAS MADE -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part III · What Was Made</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Deliverable</span>
+    <h2 class="title-sans" style="font-size: 44pt; margin-bottom: 0.2in;">The artefact,<br>end to end.</h2>
+
+    <div class="grid-2" style="margin-top: 0.2in;">
+      <div>
+        <span class="caption" style="display:block;">Site</span>
+        <div class="tree">
+          <span class="tree-line"><span class="accent">index.html</span>          · Cover · Hero + TOC</span>
+          <span class="tree-line"><span class="accent">about.html</span>          · I   · Biography + Timeline</span>
+          <span class="tree-line"><span class="accent">principles.html</span>     · II  · Ten Principles / ET 66</span>
+          <span class="tree-line"><span class="accent">work.html</span>           · III · Nine Objects</span>
+          <span class="tree-line"><span class="accent">impact.html</span>         · IV  · Numbers + Legacy + Influence</span>
+          <span class="tree-line"><span class="accent">invitation.html</span>     · V   · Eleventh Principle</span>
+          <span class="tree-line"><span class="dim">style.css · script.js · images/</span></span>
+        </div>
+      </div>
+      <div>
+        <span class="caption" style="display:block;">Documentation</span>
+        <div class="tree">
+          <span class="tree-line"><span class="accent">process-book.html / .pdf</span>  · 31-page process book</span>
+          <span class="tree-line"><span class="accent">slide-deck.html / .pdf</span>    · this deck</span>
+          <span class="tree-line"><span class="accent">presentation-script.md</span>   · video walkthrough script</span>
+          <span class="tree-line"><span class="accent">README.md</span>                · project documentation</span>
+        </div>
+
+        <span class="caption" style="display:block; margin-top: 0.2in;">Snapshots (evolution)</span>
+        <div class="tree">
+          <span class="tree-line"><span class="dim">_process_snapshots/</span></span>
+          <span class="tree-line">  <span class="accent">v1_original_self_coded/</span>     · Hand-coded base</span>
+          <span class="tree-line">  <span class="accent">v2_pre_immersive/</span>           · After plugins</span>
+          <span class="tree-line">  <span class="accent">v3_immersive_singlepage/</span>    · After Claude Code</span>
+          <span class="tree-line">  <span class="accent">v4_multipage_final/</span>         · Current (multi-page)</span>
+        </div>
+
+        <span class="caption" style="display:block; margin-top: 0.2in;">Research</span>
+        <div class="tree">
+          <span class="tree-line"><span class="dim">process/</span>    · 10 UX research PDFs (01–08) + design board + hi-fi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 09</span>
+    <span class="chrome-accent">09 / 35</span>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PART IV · RESEARCH
+     ======================================================================== -->
+
+<!-- 09 · UX RESEARCH DELIVERABLES -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part IV · Research</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">IV · Research</span>
+    <h2 class="title-serif" style="font-size: 48pt; margin-bottom: 0.15in;">Studying him<br>before drawing him.</h2>
+    <p class="lead" style="max-width: 11in; margin-bottom: 0.25in;">Before any pixel was placed, the project went through eight UX research deliverables — the standard sequence I've used in this course all semester.</p>
+
+    <div class="grid-2" style="max-width: 12in; gap: 0.3in;">
+      <div class="stack" style="margin-top: 0;">
+        <div class="stack-row"><span class="stack-label">01 · Persona</span><span class="stack-value">Design students · professional designers · architecture-curious readers</span></div>
+        <div class="stack-row"><span class="stack-label">02 · Empathy Map</span><span class="stack-value">Think / see / say / do — when looking up Rams</span></div>
+        <div class="stack-row"><span class="stack-label">03 · Journey Map</span><span class="stack-value">Search → principle discovery → work browse → biography</span></div>
+        <div class="stack-row"><span class="stack-label">04 · User Flow</span><span class="stack-value">Decision tree behind every primary task</span></div>
+        <div class="stack-row"><span class="stack-label">05 · Site Map</span><span class="stack-value">Anchored sections (later restructured into six pages)</span></div>
+      </div>
+      <div class="stack" style="margin-top: 0;">
+        <div class="stack-row"><span class="stack-label">06 · Mood Board</span><span class="stack-value">Warm off-white · IBM Plex · Braun-orange · perforated grids</span></div>
+        <div class="stack-row"><span class="stack-label">07 · Precedent</span><span class="stack-value">Vitsœ.com · Rams documentary · MoMA · Braun archive</span></div>
+        <div class="stack-row"><span class="stack-label">08 · Wireframes</span><span class="stack-value">Low &amp; mid-fidelity grids · component composition</span></div>
+        <div class="stack-row"><span class="stack-label">— · Design Board</span><span class="stack-value">Type ramp · colour · grid units · component library</span></div>
+        <div class="stack-row"><span class="stack-label">— · Hi-Fi Prototype</span><span class="stack-value">Mockup the production build was implemented from</span></div>
+      </div>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--mid); margin-top: 0.2in; font-style: italic;">All ten artefacts live in <code>process/</code> and are linked from the site and process book.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 10</span>
+    <span class="chrome-accent">10 / 35</span>
+  </div>
+</section>
+
+<!-- 10 · THREE TAKEAWAYS THAT SURVIVED -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part IV · What the Research Told Me</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Research → Build</span>
+    <h2 class="title-sans" style="font-size: 40pt; margin-bottom: 0.2in;">Three takeaways<br><em class="accent">that survived to the build.</em></h2>
+
+    <div class="grid-3" style="margin-top: 0.15in;">
+      <div class="plugin">
+        <span class="plugin-num">01 / 03</span>
+        <span class="plugin-name">Principles first, biography second.</span>
+        <span class="plugin-desc">The journey map showed nearly every visitor's primary intent is "remind me what the ten principles are." Wireframe priority: principles directly after about, before the work catalogue.</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">02 / 03</span>
+        <span class="plugin-name">Loud references, quiet layout.</span>
+        <span class="plugin-desc">Precedent research showed Vitsœ's own site is genuinely restrained — small type, generous white space, a single accent. The design board codified this: one accent, one type family, one grid.</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">03 / 03</span>
+        <span class="plugin-name">Objects, never ornament.</span>
+        <span class="plugin-desc">Mood board explicitly excluded lifestyle photography that romanticises the work. Every product image on the final site is on a clean off-white "catalogue plate" with a thin inner border — Vitsœ's own treatment.</span>
+      </div>
+    </div>
+
+    <div class="hr-accent" style="margin: 0.3in 0 0.15in;"></div>
+    <p style="font-size: 10pt; color: rgba(255,255,255,0.5); font-style: italic; max-width: 11in;">Every structural decision in the build traces back to one of these. Research wasn't a box to tick. It was the frame that made the design possible.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 11</span>
+    <span class="chrome-accent">11 / 35</span>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PART V · DESIGN SYSTEM
+     ======================================================================== -->
+
+<!-- 11 · TYPOGRAPHY -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part V · Design System · Type</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">V · Typography</span>
+    <h2 class="title-serif" style="font-size: 50pt; margin-bottom: 0.25in;">One family.<br>Three voices.</h2>
+
+    <div class="grid-3" style="margin-top: 0.15in;">
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.1in;">Sans — IBM Plex Sans</span>
+        <p style="font-family: var(--font-sans); font-weight: 200; font-size: 52pt; line-height: 0.9; letter-spacing: -0.04em; color: var(--text); margin-bottom: 0.1in;">Aa</p>
+        <p style="font-size: 9.5pt;">All UI — navigation, body copy, captions, meta strips. Weights 200 · 400 · 500 · 600.</p>
+      </div>
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.1in;">Serif — IBM Plex Serif Italic</span>
+        <p style="font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: 52pt; line-height: 0.9; letter-spacing: -0.03em; color: var(--accent); margin-bottom: 0.1in;">Aa</p>
+        <p style="font-size: 9.5pt;">Editorial moments — chapter titles, principle headlines, pull quotes, the closing mantra.</p>
+      </div>
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.1in;">Mono — IBM Plex Mono</span>
+        <p style="font-family: var(--font-mono); font-weight: 400; font-size: 52pt; line-height: 0.9; color: var(--text); margin-bottom: 0.1in;">Aa</p>
+        <p style="font-size: 9.5pt;">Readouts, LED labels, kbd keys, colophon, colour swatches — every moment pretending to be an instrument.</p>
+      </div>
+    </div>
+
+    <div class="hr-accent" style="margin-top: 0.3in;"></div>
+    <p style="font-size: 10pt; max-width: 10in; margin-top: 0.15in;">IBM commissioned Plex to replace Helvetica with a typeface that has personality but stays out of the way. Exactly the Rams brief — a typographic translation of "less, but better." Free under SIL OFL, served via Google Fonts.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 12</span>
+    <span class="chrome-accent">12 / 35</span>
+  </div>
+</section>
+
+<!-- 12 · COLOUR + GRID -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part V · Design System · Colour &amp; Grid</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">V · Colour &amp; Grid</span>
+    <h2 class="title-sans" style="font-size: 42pt; margin-bottom: 0.25in;">One accent. <em class="accent">Used everywhere.</em></h2>
+
+    <div class="grid-2" style="gap: 0.6in;">
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">Palette · Five values</span>
+        <div class="swatches">
+          <div class="swatch"><span class="swatch-chip" style="background:#F4F2ED;"></span><span class="swatch-hex">#F4F2ED</span><span class="swatch-desc">Off-white ground</span></div>
+          <div class="swatch"><span class="swatch-chip" style="background:#E6E3DC;"></span><span class="swatch-hex">#E6E3DC</span><span class="swatch-desc">Light · borders</span></div>
+          <div class="swatch"><span class="swatch-chip" style="background:#A8A49B;"></span><span class="swatch-hex">#A8A49B</span><span class="swatch-desc">Mid · captions, meta</span></div>
+          <div class="swatch"><span class="swatch-chip" style="background:#242220;"></span><span class="swatch-hex">#242220</span><span class="swatch-desc">Text · warm black</span></div>
+          <div class="swatch"><span class="swatch-chip" style="background:#141311;"></span><span class="swatch-hex">#141311</span><span class="swatch-desc">Dark · hero, devices</span></div>
+          <div class="swatch"><span class="swatch-chip" style="background:#C73D28;"></span><span class="swatch-hex" style="color: var(--accent);">#C73D28</span><span class="swatch-desc">Accent · Braun-Rot · the one colour</span></div>
+        </div>
+        <p style="font-size: 9.5pt; margin-top: 0.2in; color: rgba(255,255,255,0.5); font-style: italic;">Used for: the equals key · every active state · every LED · timeline marker · principle numbers · corner brackets · meter needles · influence highlights. Restraint here <strong style="color:var(--white)">is</strong> the design.</p>
+      </div>
+
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">Grid &amp; Motion</span>
+        <div class="stack" style="margin-top: 0;">
+          <div class="stack-row"><span class="stack-label">Max width</span><span class="stack-value">1160px content</span></div>
+          <div class="stack-row"><span class="stack-label">Container pad</span><span class="stack-value">48pt desktop · 24pt mobile</span></div>
+          <div class="stack-row"><span class="stack-label">Baseline</span><span class="stack-value">8-pt grid</span></div>
+          <div class="stack-row"><span class="stack-label">Section pad</span><span class="stack-value">120pt desktop · 72pt mobile</span></div>
+          <div class="stack-row"><span class="stack-label">Ease</span><span class="stack-value">cubic-bezier(.16, 1, .3, 1)</span></div>
+          <div class="stack-row"><span class="stack-label">Durations</span><span class="stack-value">250ms hover · 600ms reveal · 1.4s settle</span></div>
+          <div class="stack-row"><span class="stack-label">Motion policy</span><span class="stack-value">Full prefers-reduced-motion respect</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 13</span>
+    <span class="chrome-accent">13 / 35</span>
+  </div>
+</section>
+
+<!-- 13 · DEVICE LANGUAGE -->
+<section class="slide slide--dark slide--grille">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part V · The Device Language</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">V · The Device Language</span>
+    <h2 class="title-sans" style="font-size: 42pt; margin-bottom: 0.2in;">Six products,<br><em class="accent">one catalogue of materials.</em></h2>
+    <p style="max-width: 11in; margin-bottom: 0.2in;">The most consequential design decision in the project: <strong style="color:var(--white)">every interactive section is wrapped in chrome that reads as a real Braun device</strong>. Same dark gradient frame, same lowercase wordmark, same orange LED, same monospace meta strip. This is what knits the whole site together.</p>
+
+    <div class="grid-2">
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">Shared CSS tokens</span>
+        <div class="stack" style="margin-top: 0;">
+          <div class="stack-row"><span class="stack-label">Device body</span><span class="stack-value"><code>--device-bg</code> · dark linear gradient</span></div>
+          <div class="stack-row"><span class="stack-label">Inner window</span><span class="stack-value"><code>--device-window</code> · #0e0d0a</span></div>
+          <div class="stack-row"><span class="stack-label">Frame edge</span><span class="stack-value"><code>--device-border</code> · rgba(255,255,255,0.08)</span></div>
+          <div class="stack-row"><span class="stack-label">Separator</span><span class="stack-value"><code>--device-line</code> · rgba(255,255,255,0.06)</span></div>
+          <div class="stack-row"><span class="stack-label">Texture</span><span class="stack-value"><code>--device-grille</code> · repeating-linear-gradient</span></div>
+          <div class="stack-row"><span class="stack-label">LED on</span><span class="stack-value"><code>--device-led-on</code> · var(--accent)</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">Where the tokens are used</span>
+        <ul class="bullets" style="margin-top: 0;">
+          <li><strong>Hero</strong> — Braun device faceplate wrapping the name</li>
+          <li><strong>Principles</strong> — ET 66 calculator frame + display panel</li>
+          <li><strong>Timeline</strong> — T 1000 World Receiver tuning dial casing</li>
+          <li><strong>Index</strong> — Studio mixer meter-rack frame</li>
+          <li><strong>Legacy</strong> — Six-channel hi-fi rack</li>
+          <li><strong>HUD</strong> — Tape-deck readout pinned bottom of every page</li>
+        </ul>
+        <p style="font-size: 9.5pt; margin-top: 0.2in; font-style: italic; color: rgba(255,255,255,0.55);">Define the materials once. Reuse them on every device. This is exactly how Braun's actual industrial design programme worked under Rams.</p>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 14</span>
+    <span class="chrome-accent">14 / 35</span>
+  </div>
+</section>
+
+<!-- 14 · PART V TRANSITION (visual divider before phases) — reuse for visual breath -->
+<section class="slide slide--dark quote-slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part V → VI</span>
+  </div>
+  <div class="body">
+    <span class="quote-mark">“</span>
+    <p class="quote-text">Indifference towards people and the reality in which they live is actually the one and only cardinal sin in design.</p>
+    <span class="quote-attr">— Dieter Rams</span>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 15</span>
+    <span class="chrome-accent">15 / 35</span>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PART VI · BUILD PHASES
+     ======================================================================== -->
+
+<!-- 15 · FOUR PHASES OVERVIEW -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VI · The Four Build Phases</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">VI · Evolution</span>
+    <h2 class="title-sans" style="font-size: 42pt; margin-bottom: 0.15in;">From a white page<br><em class="accent">to a Braun catalogue.</em></h2>
+    <p style="max-width: 11in;">Every phase is preserved in <code>_process_snapshots/</code> so the before and after of every decision can be audited side-by-side.</p>
+
+    <div class="phases">
+      <div class="phase">
+        <span class="phase-tag">PHASE 01 · v1</span>
+        <span class="phase-title">Self-coded base</span>
+        <span class="phase-desc">Hand-written HTML, CSS, vanilla JS. Ten product photographs. The clean foundational white version that establishes the visual system.</span>
+        <span class="phase-tools">100% Max · no AI · no plugins</span>
+      </div>
+      <div class="phase">
+        <span class="phase-tag">PHASE 02 · v2</span>
+        <span class="phase-title">21st.dev plugins</span>
+        <span class="phase-desc">Four React/TSX components from the open-source 21st.dev community library, re-implemented from React/Tailwind into vanilla to fit the host.</span>
+        <span class="phase-tools">21st.dev · self-integrated</span>
+      </div>
+      <div class="phase">
+        <span class="phase-tag">PHASE 03 · v3</span>
+        <span class="phase-title">Claude Code · Braun instruments</span>
+        <span class="phase-desc">Every interactive section rebuilt around an actual Braun product as interface metaphor. The calculator, the dial, the meter rack, the hi-fi rack, the device-framed hero, the HUD.</span>
+        <span class="phase-tools">Claude Code · AI-assisted</span>
+      </div>
+      <div class="phase">
+        <span class="phase-tag">PHASE 04 · v4</span>
+        <span class="phase-title">Multi-page architecture</span>
+        <span class="phase-desc">Colby's critique note: a single endless scroll inherently violates "less, but better." Restructured into a cover plus five focused chapters.</span>
+        <span class="phase-tools">Claude Code · AI-assisted</span>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 16</span>
+    <span class="chrome-accent">16 / 35</span>
+  </div>
+</section>
+
+<!-- 16 · PHASE 1 DETAIL -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VI · Phase 1 · Self-Coded</span>
+  </div>
+  <div class="body">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">Phase 01 · v1</span>
+        <h2 class="title-serif" style="font-size: 46pt; margin-bottom: 0.15in;">Self-coded<br>base.</h2>
+        <p style="max-width: 5in;">A clean white site, hand-written, opening directly in any browser. The foundation every later version is built on. No framework, no build step, no NPM install — just three files and ten product photographs.</p>
+        <div class="hr-accent"></div>
+        <p style="max-width: 5in; font-size: 10pt;">Every line of CSS through about line 1,960 is hand-written by me. Every line of JS through about line 388 is hand-written by me. The first nine product cards are hand-marked-up.</p>
+      </div>
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">What v1 contained</span>
+        <ul class="bullets" style="margin-top: 0;">
+          <li>Hero with subtly-drifting modular grid background</li>
+          <li>About section — portrait + meta list + four-paragraph bio</li>
+          <li>Ten Principles in a 2-column card grid (later replaced by the calculator)</li>
+          <li>Selected Work in a 3-column grid with All/Braun/Vitsœ filter</li>
+          <li>Pull-quote break section</li>
+          <li>Legacy in a 6-card grid with custom SVG icons</li>
+          <li>Vertical Timeline with year + content + dot marker</li>
+          <li>Contact section with form</li>
+          <li>Footer with credit line</li>
+        </ul>
+        <p style="font-size: 9.5pt; margin-top: 0.2in; font-style: italic; color: var(--mid);">v1 was understandable. It wasn't yet self-explanatory — that's the gap the next three phases close.</p>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 17</span>
+    <span class="chrome-accent">17 / 35</span>
+  </div>
+</section>
+
+<!-- 17 · PHASE 2 — 21st.dev plugins -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VI · Phase 2 · 21st.dev Plugins</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Phase 02 · v2</span>
+    <h2 class="title-sans" style="font-size: 40pt; margin-bottom: 0.15in;">Four React components,<br><em class="accent">adapted to vanilla.</em></h2>
+    <p style="max-width: 11in; margin-bottom: 0.15in;">21st.dev is an open-source community-curated marketplace of React/Tailwind UI components. Each ships as a single TSX file. My host is vanilla, so adoption meant rewriting each one — keeping the visual idea, losing the React abstraction.</p>
+
+    <div class="grid-4" style="margin-top: 0.15in;">
+      <div class="plugin">
+        <span class="plugin-num">PLUGIN 01</span>
+        <span class="plugin-name">Dot-Pattern Quote Block</span>
+        <span class="plugin-desc">Bordered frame with corner squares and a dot-grid background. Mixed-weight typographic statement. Still lives in <code>work.html</code> between chapter intro and the objects.</span>
+        <span class="plugin-status">Adapted · still in site</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">PLUGIN 02</span>
+        <span class="plugin-name">Parallax Scroll Feature</span>
+        <span class="plugin-desc">Alternating left/right rows with scroll-driven copy slide-up and image clip-reveal. Powers the entire Work chapter — nine objects in detail.</span>
+        <span class="plugin-status">Adapted · core component</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">PLUGIN 03</span>
+        <span class="plugin-name">Wave-Path Interactive Line</span>
+        <span class="plugin-desc">Spring-physics SVG line that bends with cursor and snaps back. Originally lived before contact but removed in v4 — metaphor was too abstract. Replaced by the Eleventh Principle.</span>
+        <span class="plugin-status">Removed · superseded</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">PLUGIN 04</span>
+        <span class="plugin-name">Text-Rotate Scroll Gallery</span>
+        <span class="plugin-desc">Sticky left pane with character-rotating text, synced to scrolling cards on the right. Powers Designers He Shaped — 7 contemporary designers, each with a hand-drawn SVG silhouette of their signature work.</span>
+        <span class="plugin-status">Adapted · core component</span>
+      </div>
+    </div>
+
+    <p style="font-size: 9.5pt; color: rgba(255,255,255,0.5); margin-top: 0.3in; font-style: italic;">What the adaptation taught me: word-level wrapping, character-level animation. The first text-rotate broke "Jonathan Ive" mid-word. Fix: wrap each word in an unbreakable inline-block, animate chars inside.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 18</span>
+    <span class="chrome-accent">18 / 35</span>
+  </div>
+</section>
+
+<!-- 18 · PHASE 3 — Claude Code / 6 Braun devices -->
+<section class="slide slide--dark slide--grille">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VI · Phase 3 · Claude Code</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Phase 03 · v3</span>
+    <h2 class="title-sans" style="font-size: 40pt; margin-bottom: 0.15in;">The instrumentation pass.</h2>
+    <p style="max-width: 11in; margin-bottom: 0.15in;">Two days of pair-iteration with Claude Code — Anthropic's coding agent, Claude Sonnet, in Cowork mode. I provided design direction, Claude Code generated the implementation, I directed iteration until the visual matched intent. Six devices came out of it.</p>
+
+    <div class="grid-3" style="margin-top: 0.15in;">
+      <div class="plugin">
+        <span class="plugin-num">DEVICE 01</span>
+        <span class="plugin-name">Hero · Braun device faceplate</span>
+        <span class="plugin-desc">Name sits inside a translucent device frame with the lowercase <em>braun</em> wordmark, perforated speaker-grille texture, four corner brackets, a pulsing LED, bottom readout strip.</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">DEVICE 02</span>
+        <span class="plugin-name">Principles · ET 66 Calculator</span>
+        <span class="plugin-desc">Ten principles, ten keys. Principle 10 "Less, but better" in the iconic orange equals position. Display panel with accent-orange principle number + serif title.</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">DEVICE 03</span>
+        <span class="plugin-name">Timeline · T 1000 dial</span>
+        <span class="plugin-desc">Horizontal scroll-driven. 11-tick rotor slides under a fixed marker. Knob rotates 36° per tick. Readout cross-fades year, event, body.</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">DEVICE 04</span>
+        <span class="plugin-name">Index · Studio meter rack</span>
+        <span class="plugin-desc">Six purpose-built instruments, one per data type. Date pad / tenure bar / 10-LED row / model plate / odometer / histogram.</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">DEVICE 05</span>
+        <span class="plugin-name">Legacy · Six-channel rack</span>
+        <span class="plugin-desc">Stacked hi-fi modules. Each a channel (Apple/Ive, Museums, Documentary, Education, Sustainability, Vitsœ) with LED + VU bar + LIVE readout.</span>
+      </div>
+      <div class="plugin">
+        <span class="plugin-num">DEVICE 06</span>
+        <span class="plugin-name">Persistent bottom HUD</span>
+        <span class="plugin-desc">Tape-deck readout pinned to every page. Wordmark · chapter number · italic chapter name · scroll progress · LED · REC.</span>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 19</span>
+    <span class="chrome-accent">19 / 35</span>
+  </div>
+</section>
+
+<!-- 19 · PHASE 4 — Multi-page restructure -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VI · Phase 4 · Multi-page</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Phase 04 · v4</span>
+    <h2 class="title-serif" style="font-size: 52pt; margin-bottom: 0.2in;">One scroll<br><em class="accent">became five chapters.</em></h2>
+
+    <div class="grid-2" style="margin-top: 0.1in;">
+      <div style="padding: 0.25in 0.3in; background: var(--dark); color: var(--white); border-left: 3px solid var(--accent);">
+        <span style="font-size: 9pt; font-weight: 600; letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; display:block; margin-bottom:0.1in;">The critique that mattered most</span>
+        <p style="font-family: var(--font-serif); font-style: italic; font-size: 18pt; line-height: 1.3; color: var(--white);">"A single endless scroll inherently violates 'Less, but better.' Each screen has to do too much. Multi-page architecture where each page focuses on one subject would honour the principle more directly."</p>
+        <p style="font-size: 9pt; color: rgba(255,255,255,0.5); margin-top: 0.15in; letter-spacing: 0.18em; text-transform: uppercase;">— Colby · mid-project critique</p>
+      </div>
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">Restructured into</span>
+        <div class="stack" style="margin-top: 0;">
+          <div class="stack-row"><span class="stack-label">index.html</span><span class="stack-value">Cover · Hero + TOC</span></div>
+          <div class="stack-row"><span class="stack-label">about.html</span><span class="stack-value">I  · Biography + Timeline</span></div>
+          <div class="stack-row"><span class="stack-label">principles.html</span><span class="stack-value">II · Ten Principles / ET 66</span></div>
+          <div class="stack-row"><span class="stack-label">work.html</span><span class="stack-value">III · Nine Objects</span></div>
+          <div class="stack-row"><span class="stack-label">impact.html</span><span class="stack-value">IV · Numbers + Legacy + Influence</span></div>
+          <div class="stack-row"><span class="stack-label">invitation.html</span><span class="stack-value">V · Eleventh Principle</span></div>
+        </div>
+        <p style="font-size: 9.5pt; margin-top: 0.15in;">Plus: The abstract Wave "Discipline Test" was killed. Replaced with <strong>The Eleventh Principle</strong> — a single-word user contribution that closes the loop.</p>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 20</span>
+    <span class="chrome-accent">20 / 35</span>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PART VII · WALKTHROUGH
+     ======================================================================== -->
+
+<!-- 20 · SITE MAP -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VII · Site Map</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">VII · Walkthrough</span>
+    <h2 class="title-sans" style="font-size: 42pt; margin-bottom: 0.15in;">Six pages,<br><em class="accent">six instruments.</em></h2>
+    <p style="max-width: 11in;">One page per subject. Each Braun-device metaphor lives on one chapter.</p>
+
+    <div class="sitemap">
+      <div class="sitemap-node">
+        <span class="sitemap-node-num">—</span>
+        <span class="sitemap-node-tag">Cover</span>
+        <span class="sitemap-node-name">Introduction</span>
+        <span class="sitemap-node-instrument">Braun-framed hero + TOC</span>
+        <span class="sitemap-node-file">index.html</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-num">I</span>
+        <span class="sitemap-node-tag">Chapter 01</span>
+        <span class="sitemap-node-name">Biography</span>
+        <span class="sitemap-node-instrument">T 1000 World Receiver tuning dial</span>
+        <span class="sitemap-node-file">about.html</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-num">II</span>
+        <span class="sitemap-node-tag">Chapter 02</span>
+        <span class="sitemap-node-name">Principles</span>
+        <span class="sitemap-node-instrument">ET 66 Calculator keypad</span>
+        <span class="sitemap-node-file">principles.html</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-num">III</span>
+        <span class="sitemap-node-tag">Chapter 03</span>
+        <span class="sitemap-node-name">Work</span>
+        <span class="sitemap-node-instrument">Parallax catalogue spread</span>
+        <span class="sitemap-node-file">work.html</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-num">IV</span>
+        <span class="sitemap-node-tag">Chapter 04</span>
+        <span class="sitemap-node-name">Impact</span>
+        <span class="sitemap-node-instrument">Meter rack + hi-fi rack + sticky text</span>
+        <span class="sitemap-node-file">impact.html</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-num">V</span>
+        <span class="sitemap-node-tag">Chapter 05</span>
+        <span class="sitemap-node-name">Invitation</span>
+        <span class="sitemap-node-instrument">Single-input · Closing mantra</span>
+        <span class="sitemap-node-file">invitation.html</span>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 21</span>
+    <span class="chrome-accent">21 / 35</span>
+  </div>
+</section>
+
+<!-- 21 · COVER WALKTHROUGH -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VII · Walkthrough · Cover</span>
+  </div>
+  <div class="body">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">Page 01 · index.html</span>
+        <h2 class="title-serif" style="font-size: 52pt; margin-bottom: 0.2in;">Cover.<br>Two&nbsp;things&nbsp;only.</h2>
+        <p>The cover introduces the subject (the Braun-framed name) and gives the reader the table of contents. Nothing else. No long-form copy. No "about Max." A single hero, a five-row contents block, one line of credit.</p>
+        <div class="hr-accent"></div>
+        <p style="font-size: 11pt; font-style: italic;">The page exists to <strong>orient</strong>, not to <strong>perform</strong>. The most explicit application of "less, but better" anywhere in the site.</p>
+      </div>
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">What's on the page</span>
+        <ul class="bullets" style="margin-top: 0;">
+          <li>Full-viewport hero · modular-grid background drifting subtly</li>
+          <li>Braun device faceplate wrapping the name</li>
+          <li>"Dieter Rams" in sans-light 112pt · "Less, but better" in serif italic</li>
+          <li>Era · Origin · Studio readout strip along the device bottom</li>
+          <li>Single chapter-contents list · 5 rows linking to Chapter I–V</li>
+          <li>Footer with credit + keyboard hint</li>
+          <li>Persistent chapter rail and HUD pinned at the edges</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 22</span>
+    <span class="chrome-accent">22 / 35</span>
+  </div>
+</section>
+
+<!-- 22 · CHAPTER I · BIOGRAPHY + TIMELINE -->
+<section class="slide slide--dark slide--grille">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VII · Chapter I · Biography</span>
+  </div>
+  <div class="body">
+    <div class="two-col" style="grid-template-columns: 1fr 1.1fr;">
+      <div>
+        <span class="eyebrow">Page 02 · about.html</span>
+        <h2 class="title-sans" style="font-size: 44pt; margin-bottom: 0.2in;">Architect of<br><em class="accent">quiet objects.</em></h2>
+        <p style="max-width: 5in;">Two halves. First: a traditional editorial layout — portrait + meta + bio. Second: the Braun T 1000 tuning dial.</p>
+        <div class="hr-accent"></div>
+        <span class="caption" style="display:block; margin-bottom: 0.1in;">Why a dial, not a list</span>
+        <ul class="bullets" style="margin-top: 0;">
+          <li>Reading chronology by year-event-year-event is exactly how a tuner panel works</li>
+          <li>The metaphor is recognition, not decoration</li>
+          <li>11 ticks · scroll-driven · knob rotates 36° per step</li>
+          <li>Year, event, body all cross-fade on each stop</li>
+        </ul>
+      </div>
+
+      <div class="dial-mini">
+        <div style="display: flex; justify-content: space-between; padding: 4pt 10pt 10pt; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 7.5pt; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.42);">
+          <span style="font-size: 10pt; text-transform: lowercase; letter-spacing: 0.04em; color: var(--white); position: relative;">braun<span style="position: absolute; bottom: -2px; left: 0; right: 0; height: 1px; background: var(--accent); display:block;"></span></span>
+          <span>DR · Life Programme · 1932 — Now</span>
+          <span style="width: 6pt; height: 6pt; border-radius: 50%; background: var(--accent); box-shadow: 0 0 6pt rgba(199,61,40,0.5); display:inline-block;"></span>
+        </div>
+
+        <div class="dial-mini-window">
+          <span class="dial-mini-year">1947</span>
+          <span class="dial-mini-year">1955</span>
+          <span class="dial-mini-year on">1960</span>
+          <span class="dial-mini-year">1961</span>
+          <span class="dial-mini-year">1976</span>
+        </div>
+
+        <div class="dial-mini-bottom">
+          <div class="dial-mini-knob"></div>
+          <div class="dial-mini-readout">
+            <span style="font-size: 7pt; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4);">Year / Event</span>
+            <strong>1960</strong>
+            <span>606 Shelving · Vitsœ</span>
+          </div>
+          <div style="font-size: 7.5pt; color: var(--grey); letter-spacing: 0.18em; font-variant-numeric: tabular-nums;">05 / 11</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 23</span>
+    <span class="chrome-accent">23 / 35</span>
+  </div>
+</section>
+
+<!-- 23 · CHAPTER II · PRINCIPLES (with mini calc) -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VII · Chapter II · Principles</span>
+  </div>
+  <div class="body" style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 0.6in; height: 100%; align-items: center;">
+    <div>
+      <span class="eyebrow">Page 03 · principles.html</span>
+      <h2 class="title-sans" style="font-size: 40pt; margin-bottom: 0.2in;">Ten principles.<br><em class="accent">Ten keys.</em></h2>
+      <p style="max-width: 5.5in;">The hardest page to design. The principles are the most-quoted text in industrial design — every Rams tribute lays them out as a numbered list. I needed a treatment that <em>wasn't</em> a list.</p>
+      <div class="hr-accent"></div>
+      <ul class="bullets" style="margin-top: 0;">
+        <li>Ten principles → ten keys, 3×4 grid like the real ET 66</li>
+        <li>Principle 10 "Less, but better" sits in the iconic orange equals position</li>
+        <li>Click, hover, or press <kbd>1</kbd>–<kbd>9</kbd> / <kbd>0</kbd> on keyboard</li>
+        <li>Display panel cross-fades the active principle's number + title + body</li>
+        <li>The equals key is where the calculator says <em>"this is the answer"</em> — the joke wrote itself</li>
+      </ul>
+    </div>
+
+    <div class="calc-mini">
+      <div class="calc-mini-top">
+        <span>braun</span>
+        <span>ET 66 · 1976 — Now</span>
+      </div>
+      <div class="calc-mini-screen">
+        <span style="font-size:7pt;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.32);">PRINCIPLE</span>
+        <span class="calc-mini-num">10</span>
+        <span class="calc-mini-title">Less, but better.</span>
+      </div>
+      <div class="calc-mini-keys">
+        <div class="calc-mini-key"><span class="calc-mini-key-num">1</span><span class="calc-mini-key-tag">Innovative</span></div>
+        <div class="calc-mini-key"><span class="calc-mini-key-num">2</span><span class="calc-mini-key-tag">Useful</span></div>
+        <div class="calc-mini-key"><span class="calc-mini-key-num">3</span><span class="calc-mini-key-tag">Aesthetic</span></div>
+        <div class="calc-mini-key"><span class="calc-mini-key-num">4</span><span class="calc-mini-key-tag">Understand</span></div>
+        <div class="calc-mini-key"><span class="calc-mini-key-num">5</span><span class="calc-mini-key-tag">Unobtrusive</span></div>
+        <div class="calc-mini-key"><span class="calc-mini-key-num">6</span><span class="calc-mini-key-tag">Honest</span></div>
+        <div class="calc-mini-key"><span class="calc-mini-key-num">7</span><span class="calc-mini-key-tag">Lasting</span></div>
+        <div class="calc-mini-key"><span class="calc-mini-key-num">8</span><span class="calc-mini-key-tag">Thorough</span></div>
+        <div class="calc-mini-key"><span class="calc-mini-key-num">9</span><span class="calc-mini-key-tag">Environ.</span></div>
+        <div class="calc-mini-key calc-mini-key--equals" style="grid-column: span 3;"><span class="calc-mini-key-num">10</span><span class="calc-mini-key-tag">Less, but better</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 24</span>
+    <span class="chrome-accent">24 / 35</span>
+  </div>
+</section>
+
+<!-- 24 · CHAPTER III · WORK -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VII · Chapter III · Work</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Page 04 · work.html</span>
+    <h2 class="title-serif" style="font-size: 50pt; margin-bottom: 0.2in;">Nine objects, three decades.</h2>
+    <p class="lead" style="max-width: 11in; margin-bottom: 0.3in;">From the SK 4 Snow White's Coffin (1956) to the calculator that taught Apple how to lay out a keypad (1987).</p>
+
+    <div class="grid-3" style="gap: 0.15in;">
+      <div class="sitemap-node">
+        <span class="sitemap-node-tag">CAT. 01 · 1956</span>
+        <span class="sitemap-node-name">SK 4 Phonosuper</span>
+        <span class="sitemap-node-instrument">First clear-lid hi-fi. With Hans Gugelot.</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-tag">CAT. 02 · 1958</span>
+        <span class="sitemap-node-name">T 3 Pocket Radio</span>
+        <span class="sitemap-node-instrument">Direct ancestor of the iPod.</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-tag">CAT. 03 · 1958</span>
+        <span class="sitemap-node-name">L 2 Speaker</span>
+        <span class="sitemap-node-instrument">Perforated grille as the whole design.</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-tag">CAT. 04 · 1960</span>
+        <span class="sitemap-node-name">606 Shelving</span>
+        <span class="sitemap-node-instrument">Still in production. Unaltered.</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-tag">CAT. 05 · 1962</span>
+        <span class="sitemap-node-name">620 Chair Programme</span>
+        <span class="sitemap-node-instrument">Modular seating that reconfigures with the household.</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-tag">CAT. 06 · 1963</span>
+        <span class="sitemap-node-name">T 1000 World Receiver</span>
+        <span class="sitemap-node-instrument">A measurement instrument for radio.</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-tag">CAT. 07 · 1972</span>
+        <span class="sitemap-node-name">Citromatic MPZ 21</span>
+        <span class="sitemap-node-instrument">Design system on the breakfast table.</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-tag">CAT. 08 · 1987</span>
+        <span class="sitemap-node-name">AB 312 Alarm Clock</span>
+        <span class="sitemap-node-instrument">Utility and beauty aren't opposites.</span>
+      </div>
+      <div class="sitemap-node">
+        <span class="sitemap-node-tag">CAT. 09 · 1987</span>
+        <span class="sitemap-node-name">ET 66 Calculator</span>
+        <span class="sitemap-node-instrument">Colour-coding as instruction manual.</span>
+      </div>
+    </div>
+
+    <p style="font-size: 9.5pt; color: var(--mid); font-style: italic; margin-top: 0.2in;">Rendered as alternating left/right parallax rows with scroll-triggered copy slide-up and image clip-reveal. Each row has a 4-cell technical spec dl underneath.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 25</span>
+    <span class="chrome-accent">25 / 35</span>
+  </div>
+</section>
+
+<!-- 25 · CHAPTER IV · IMPACT -->
+<section class="slide slide--dark slide--grille">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VII · Chapter IV · Impact</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Page 05 · impact.html</span>
+    <h2 class="title-sans" style="font-size: 36pt; margin-bottom: 0.15in;">Three instruments,<br><em class="accent">one answer.</em></h2>
+    <p style="max-width: 11in; margin-bottom: 0.1in;">Three Braun-instrument metaphors on one page because they all answer the same question: <em>what does the work add up to?</em></p>
+
+    <div class="instr-row">
+      <div class="instr-box">
+        <span class="instr-box-ch">CH · 01 · Studio meters</span>
+        <span class="instr-box-value">6</span>
+        <span class="instr-box-name">By the Numbers</span>
+        <span class="instr-box-meta">Six purpose-built instruments — date pad (Born), tenure bar (42 yrs), 10-LED row (Principles), model plate (606), odometer (500+), histogram (40+ museums). Each matches its data type.</span>
+        <div class="mini-led-row">
+          <span class="mini-led"></span><span class="mini-led"></span><span class="mini-led"></span><span class="mini-led"></span><span class="mini-led"></span>
+          <span class="mini-led"></span><span class="mini-led"></span><span class="mini-led"></span><span class="mini-led"></span><span class="mini-led"></span>
+        </div>
+      </div>
+      <div class="instr-box">
+        <span class="instr-box-ch">CH · 02 · Hi-fi rack</span>
+        <span class="instr-box-value">6</span>
+        <span class="instr-box-name">Legacy Channels</span>
+        <span class="instr-box-meta">Six channels broadcasting — Apple/Ive, Museums, Documentary, Education, Sustainability, Vitsœ. Each module has its own LED VU bar showing "10/10 · LIVE".</span>
+        <div class="mini-bars">
+          <span style="height:40%"></span><span style="height:70%"></span><span style="height:55%"></span><span style="height:90%"></span>
+          <span style="height:60%"></span><span style="height:80%"></span><span style="height:45%"></span><span style="height:100%"></span>
+          <span style="height:75%"></span><span style="height:65%"></span>
+        </div>
+      </div>
+      <div class="instr-box">
+        <span class="instr-box-ch">CH · 03 · Influence gallery</span>
+        <span class="instr-box-value">7</span>
+        <span class="instr-box-name">Designers He Shaped</span>
+        <span class="instr-box-meta">Sticky left pane with character-rotating name. Right pane scrolls through 7 typographic product cards — Ive's iPhone, Fukasawa's MUJI CD, Morrison's Air Chair, Newson's Watch, Hecht's cookware, Grcic's Chair_One, Jongerius's Polder Sofa.</span>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 26</span>
+    <span class="chrome-accent">26 / 35</span>
+  </div>
+</section>
+
+<!-- 26 · CHAPTER V · INVITATION -->
+<section class="slide">
+  <div class="corners" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VII · Chapter V · Invitation</span>
+  </div>
+  <div class="body">
+    <div class="two-col">
+      <div>
+        <span class="eyebrow">Page 06 · invitation.html</span>
+        <h2 class="title-serif" style="font-size: 50pt; margin-bottom: 0.2in;">The eleventh<br><em class="accent">principle.</em></h2>
+        <p>Rams stopped at ten. The framework was complete in 1976. But every designer who works with it long enough eventually adds their own.</p>
+        <div class="hr-accent"></div>
+        <p style="font-size: 10.5pt;">The site's final move: a single typographic prompt asking the visitor for their contribution.</p>
+      </div>
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">The closing interaction</span>
+        <div style="background: var(--white); border: 1px solid var(--light); padding: 0.25in 0.28in; position: relative;">
+          <span style="position: absolute; top: -5pt; left: -5pt; width: 10pt; height: 10pt; background: var(--accent);"></span>
+          <span style="position: absolute; top: -5pt; right: -5pt; width: 10pt; height: 10pt; background: var(--accent);"></span>
+          <span style="position: absolute; bottom: -5pt; left: -5pt; width: 10pt; height: 10pt; background: var(--accent);"></span>
+          <span style="position: absolute; bottom: -5pt; right: -5pt; width: 10pt; height: 10pt; background: var(--accent);"></span>
+
+          <span style="font-family: var(--font-serif); font-style: italic; font-size: 18pt; color: var(--text);">Principle 11 · Good design is</span>
+          <div style="border-bottom: 2px solid var(--text); padding: 8pt 0 6pt; margin: 10pt 0; font-family: var(--font-sans); font-size: 40pt; font-weight: 200; letter-spacing: -0.04em; color: var(--accent); display: flex; justify-content: space-between; align-items: baseline;">
+            <span>alive</span>
+            <span style="font-size: 9pt; font-weight: 600; letter-spacing: 0.18em; color: var(--mid);">05 / 14</span>
+          </div>
+          <p style="font-size: 9pt; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mid); margin-bottom: 0.15in;">One word. Less, but better.</p>
+          <span style="display: inline-flex; gap: 10pt; background: var(--text); color: var(--white); padding: 8pt 18pt; font-size: 9pt; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;">Add to the framework →</span>
+        </div>
+        <ul class="bullets" style="margin-top: 0.2in;">
+          <li>14-char counter · warns at 12 · red at 14</li>
+          <li>Submit → stamped · dated · filed as Principle 11 · copied to clipboard</li>
+          <li>Followed by full-bleed closing mantra panel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 27</span>
+    <span class="chrome-accent">27 / 35</span>
+  </div>
+</section>
+
+<!-- 27 · CHAPTER V · EVEN MORE — CLOSING MANTRA preview -->
+<section class="slide slide--dark slide--grille">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VII · Closing Mantra · end of chapter V</span>
+  </div>
+  <div class="body" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+    <span style="font-size: 9pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-bottom: 0.2in; display: inline-flex; align-items: center; gap: 14pt;">
+      <span style="display:inline-block;width:32pt;height:1px;background:var(--accent);"></span>
+      Closing mantra
+      <span style="display:inline-block;width:32pt;height:1px;background:var(--accent);"></span>
+    </span>
+    <h2 style="font-family: var(--font-sans); font-size: 110pt; font-weight: 200; letter-spacing: -0.055em; line-height: 0.88; color: var(--white); margin: 0;">Weniger,<br><em style="font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--accent);">aber besser.</em></h2>
+    <p style="font-size: 11pt; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.42); margin-top: 0.2in;">Less, but better.</p>
+    <p style="font-size: 10pt; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.32); margin-top: 0.2in;">The last frame of the site · echoing on every chapter closing</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 28</span>
+    <span class="chrome-accent">28 / 35</span>
+  </div>
+</section>
+
+<!-- 28 · CHAPTER TRANSITIONS -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VII · Between-chapter affordances</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">Navigation Between Chapters</span>
+    <h2 class="title-serif" style="font-size: 44pt; margin-bottom: 0.2in;">Four ways to move.</h2>
+
+    <div class="grid-4" style="margin-top: 0.15in;">
+      <div class="plugin" style="background:var(--white);border-color:var(--light);color:var(--text);">
+        <span class="plugin-num" style="color:var(--accent);">01 · TOP NAV</span>
+        <span class="plugin-name" style="color:var(--text);">Primary horizontal nav</span>
+        <span class="plugin-desc" style="color:var(--text-light);">Five chapter links in the fixed header. Active chapter underlined in accent orange. Backdrop-blurred on scroll.</span>
+      </div>
+      <div class="plugin" style="background:var(--white);border-color:var(--light);color:var(--text);">
+        <span class="plugin-num" style="color:var(--accent);">02 · CHAPTER RAIL</span>
+        <span class="plugin-name" style="color:var(--text);">Right-edge vertical rail</span>
+        <span class="plugin-desc" style="color:var(--text-light);">Six tick marks — one per chapter plus Cover. Current chapter highlighted. Auto-inverts on dark sections.</span>
+      </div>
+      <div class="plugin" style="background:var(--white);border-color:var(--light);color:var(--text);">
+        <span class="plugin-num" style="color:var(--accent);">03 · CHAPTER FOOTER</span>
+        <span class="plugin-name" style="color:var(--text);">Previous / Next at end</span>
+        <span class="plugin-desc" style="color:var(--text-light);">Bottom of each chapter: two editorial cards with ← prev and next → links, naming the adjacent chapters by Roman numeral.</span>
+      </div>
+      <div class="plugin" style="background:var(--white);border-color:var(--light);color:var(--text);">
+        <span class="plugin-num" style="color:var(--accent);">04 · KEYBOARD</span>
+        <span class="plugin-name" style="color:var(--text);">Digits + j/k</span>
+        <span class="plugin-desc" style="color:var(--text-light);"><kbd>0</kbd>–<kbd>5</kbd> jump to any chapter. <kbd>j</kbd>/<kbd>k</kbd> next/previous. <kbd>?</kbd> shows the full help panel. <kbd>gg</kbd> to top.</span>
+      </div>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--mid); font-style: italic; margin-top: 0.3in; max-width: 11in;">Plus: every page has the persistent bottom HUD tape-deck readout showing current chapter · italic name · scroll progress · REC.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 29</span>
+    <span class="chrome-accent">29 / 35</span>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PART VIII · CRAFT
+     ======================================================================== -->
+
+<!-- 29 · TECHNICAL CRAFT -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VIII · Craft</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">VIII · Technical Craft</span>
+    <h2 class="title-sans" style="font-size: 42pt; margin-bottom: 0.2in;">The stack,<br><em class="accent">deliberately thin.</em></h2>
+
+    <div class="grid-2" style="gap: 0.5in;">
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">Stack</span>
+        <div class="stack" style="margin-top:0;">
+          <div class="stack-row"><span class="stack-label">Markup</span><span class="stack-value">HTML5 · semantic elements · ARIA</span></div>
+          <div class="stack-row"><span class="stack-label">Styles</span><span class="stack-value">Vanilla CSS · custom properties · flex/grid</span></div>
+          <div class="stack-row"><span class="stack-label">Script</span><span class="stack-value">Vanilla JS · IntersectionObserver · no dependencies</span></div>
+          <div class="stack-row"><span class="stack-label">Framework</span><span class="stack-value">None · no React / Vue / Tailwind / jQuery</span></div>
+          <div class="stack-row"><span class="stack-label">Build</span><span class="stack-value">None · no bundler · no NPM install</span></div>
+          <div class="stack-row"><span class="stack-label">Fonts</span><span class="stack-value">IBM Plex · Google Fonts CDN · 3 families</span></div>
+          <div class="stack-row"><span class="stack-label">Images</span><span class="stack-value">10 optimised JPGs · public-domain Braun/Vitsœ</span></div>
+          <div class="stack-row"><span class="stack-label">Total weight</span><span class="stack-value">~115 KB across 6 pages · excl. images</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="caption" style="display:block; margin-bottom: 0.12in;">Accessibility &amp; performance</span>
+        <ul class="bullets" style="margin-top:0;">
+          <li>Full prefers-reduced-motion respect · every animation has an instant fallback</li>
+          <li>Skip-to-content link · every page</li>
+          <li>Focus-visible rings tuned to accent · keyboard-only friendly</li>
+          <li>Semantic HTML — <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code></li>
+          <li>Alt text on every image</li>
+          <li>ARIA labels on all custom interactive widgets</li>
+          <li>Responsive down to 360px viewport width</li>
+          <li>Print stylesheet for the ten principles</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="font-size: 10pt; color: rgba(255,255,255,0.48); font-style: italic; margin-top: 0.25in; text-align: center;">Opens directly in any browser. No server, no build step. The opposite of the modern JS-framework bloat. Principle 7: <em>long-lasting.</em></p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 30</span>
+    <span class="chrome-accent">30 / 35</span>
+  </div>
+</section>
+
+<!-- 30 · KEYBOARD / INTERACTION DESIGN -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VIII · Keyboard</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">VIII · Keyboard Navigation</span>
+    <h2 class="title-serif" style="font-size: 46pt; margin-bottom: 0.1in;">Power-user controls.</h2>
+    <p class="lead" style="max-width: 10in; margin-bottom: 0.25in;">Every chapter of the site is addressable by a single keystroke. Every animated interaction has a keyboard equivalent. Nothing on the site requires a mouse.</p>
+
+    <div class="keygrid">
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>0</kbd></span><span class="keygrid-cell-label">Cover page</span></div>
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>1</kbd></span><span class="keygrid-cell-label">I · Biography</span></div>
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>2</kbd></span><span class="keygrid-cell-label">II · Principles</span></div>
+
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>3</kbd></span><span class="keygrid-cell-label">III · Work</span></div>
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>4</kbd></span><span class="keygrid-cell-label">IV · Impact</span></div>
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>5</kbd></span><span class="keygrid-cell-label">V · Invitation</span></div>
+
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>j</kbd></span><span class="keygrid-cell-label">Next chapter</span></div>
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>k</kbd></span><span class="keygrid-cell-label">Previous chapter</span></div>
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>?</kbd></span><span class="keygrid-cell-label">Help panel</span></div>
+
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>g</kbd> <kbd>g</kbd></span><span class="keygrid-cell-label">Scroll to top</span></div>
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>Esc</kbd></span><span class="keygrid-cell-label">Close any panel</span></div>
+      <div class="keygrid-cell"><span class="keygrid-cell-keys"><kbd>1</kbd> – <kbd>0</kbd></span><span class="keygrid-cell-label">On II · principle keys</span></div>
+    </div>
+
+    <p style="font-size: 10pt; color: var(--mid); font-style: italic; margin-top: 0.3in; max-width: 11in;">The keyboard panel itself lives in the bottom-right corner of every page — a small ghost-button labelled "Press <kbd>?</kbd> for keys." Click or press to toggle.</p>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 31</span>
+    <span class="chrome-accent">31 / 35</span>
+  </div>
+</section>
+
+<!-- 31 · BY THE NUMBERS -->
+<section class="slide slide--dark slide--grille">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part VIII · Project Metrics</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">VIII · By the Numbers</span>
+    <h2 class="title-sans" style="font-size: 40pt; margin-bottom: 0.15in;">The whole system.</h2>
+    <p style="max-width: 11in; margin-bottom: 0.15in;">A complete accounting of the final deliverable.</p>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <span class="metric-value">06</span>
+        <span class="metric-label">Pages</span>
+        <span class="metric-sub">Cover + 5 chapters</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">35</span>
+        <span class="metric-label">Slides (this deck)</span>
+        <span class="metric-sub">Organised in 10 parts</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">10</span>
+        <span class="metric-label">UX Artefacts</span>
+        <span class="metric-sub">Persona → Hi-Fi prototype</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">04</span>
+        <span class="metric-label">Build Phases</span>
+        <span class="metric-sub">All snapshots preserved</span>
+      </div>
+    </div>
+
+    <div class="metric-grid">
+      <div class="metric">
+        <span class="metric-value">5.4k</span>
+        <span class="metric-label">CSS Lines</span>
+        <span class="metric-sub">Single stylesheet · all pages</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">1.3k</span>
+        <span class="metric-label">JS Lines</span>
+        <span class="metric-sub">Vanilla · single script</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">06</span>
+        <span class="metric-label">Braun Devices</span>
+        <span class="metric-sub">Calculator · Dial · Meters · Rack · Hero · HUD</span>
+      </div>
+      <div class="metric">
+        <span class="metric-value">01</span>
+        <span class="metric-label">Accent Colour</span>
+        <span class="metric-sub">#C73D28 · Braun-orange</span>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 33</span>
+    <span class="chrome-accent">32 / 35</span>
+  </div>
+</section>
+
+<!-- ========================================================================
+     PART IX · REFLECTION
+     ======================================================================== -->
+
+<!-- 32 · WHAT I LEARNED -->
+<section class="slide">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part IX · Reflection</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">IX · What I Learned</span>
+    <h2 class="title-serif" style="font-size: 50pt; margin-bottom: 0.25in;">Three things<br>I didn't know going in.</h2>
+
+    <div class="grid-3">
+      <div style="padding: 0.22in 0.25in; background: var(--white); border: 1px solid var(--light);">
+        <span style="font-size:8pt;font-weight:600;letter-spacing:0.22em;color:var(--accent);display:block;margin-bottom:0.1in;">01 · LOAD-BEARING METAPHORS</span>
+        <p style="font-size: 10pt;">Skeuomorphism gets a bad name because it's usually decorative — leather calendars, felt poker tables. What I learned: skeuomorphism <em>works</em> when the metaphor does real navigational work. The calculator keypad is an actual interface for choosing a principle. The dial is an actual interface for moving through a timeline. Not decoration — structure.</p>
+      </div>
+      <div style="padding: 0.22in 0.25in; background: var(--white); border: 1px solid var(--light);">
+        <span style="font-size:8pt;font-weight:600;letter-spacing:0.22em;color:var(--accent);display:block;margin-bottom:0.1in;">02 · HONOUR BY APPLYING</span>
+        <p style="font-size: 10pt;">My first instinct was to add. Another section, another readout, another animation. The most consequential edits in this project were all <em>subtractions</em> — deleting the original Work grid, replacing the wave Discipline Test with a single-input form, splitting the long scroll into focused pages. Every removal made the site closer to what Rams actually argued for.</p>
+      </div>
+      <div style="padding: 0.22in 0.25in; background: var(--white); border: 1px solid var(--light);">
+        <span style="font-size:8pt;font-weight:600;letter-spacing:0.22em;color:var(--accent);display:block;margin-bottom:0.1in;">03 · AI CHANGES THE TEMPO</span>
+        <p style="font-size: 10pt;">Working with Claude Code let me try and discard ideas at a speed I couldn't on my own. The first meter rack used identical dials — wrong. We replaced it with six purpose-built instruments inside the same hour. Bad ideas that would normally take a week to admit and remove took a half-day. A different working method — worth being honest about.</p>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 33</span>
+    <span class="chrome-accent">33 / 35</span>
+  </div>
+</section>
+
+<!-- 33 · AI USE DECLARATION -->
+<section class="slide slide--dark">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>Part X · Honest Accounting</span>
+  </div>
+  <div class="body">
+    <span class="eyebrow">X · AI Use Declaration</span>
+    <h2 class="title-sans" style="font-size: 36pt; margin-bottom: 0.1in;">Honest accounting.</h2>
+    <p style="max-width: 11in; margin-bottom: 0.2in; font-size: 10.5pt;">In the spirit of Principle 6: <em>good design is honest.</em> A clear record of every external tool used.</p>
+
+    <div>
+      <div class="decl-row">
+        <span class="decl-label">Original concept</span>
+        <span class="decl-value">100% Max McDonough. Designer selection, narrative arc, visual system, the Braun-instrument metaphors, every design decision.</span>
+      </div>
+      <div class="decl-row">
+        <span class="decl-label">Build Phase 1 (v1)</span>
+        <span class="decl-value">100% self-coded. Hand-written HTML, CSS, vanilla JS. No AI, no plugins. Foundational version every later phase is built on.</span>
+      </div>
+      <div class="decl-row">
+        <span class="decl-label">Build Phase 2 (v2)</span>
+        <span class="decl-value">Self-integrated. Four React/TSX components from <strong style="color:var(--white)">21st.dev</strong> (open-source community library) re-implemented by me from React/Tailwind into vanilla HTML/CSS/JS.</span>
+      </div>
+      <div class="decl-row">
+        <span class="decl-label">Build Phase 3 (v3)</span>
+        <span class="decl-value">AI-assisted. <strong style="color:var(--white)">Claude Code</strong> (Anthropic coding agent · Claude Sonnet model · Cowork mode) used as pair-programmer for the Braun-instrument language. I directed; Claude implemented; I iterated.</span>
+      </div>
+      <div class="decl-row">
+        <span class="decl-label">Build Phase 4 (v4)</span>
+        <span class="decl-value">AI-assisted restructure. Multi-page architecture following Colby's critique. Architectural decision was the instructor's; implementation was AI-assisted.</span>
+      </div>
+      <div class="decl-row">
+        <span class="decl-label">UX research deliverables</span>
+        <span class="decl-value">100% Max McDonough. All 8 research PDFs + design board + Hi-Fi prototype authored prior to any AI involvement.</span>
+      </div>
+      <div class="decl-row">
+        <span class="decl-label">Process book · script · deck</span>
+        <span class="decl-value">AI-assisted writing. Drafted with Claude Code, reviewed &amp; edited by me. Arguments are mine; prose iterated together.</span>
+      </div>
+      <div class="decl-row">
+        <span class="decl-label">Images &amp; type</span>
+        <span class="decl-value">Public-domain Braun / Vitsœ photography. Rams portrait under CC BY-SA 3.0. IBM Plex (OFL) via Google Fonts. No AI-generated images.</span>
+      </div>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>Slide 34</span>
+    <span class="chrome-accent">34 / 35</span>
+  </div>
+</section>
+
+<!-- 34 · CLOSING MANTRA -->
+<section class="slide slide--dark slide--grille mantra">
+  <div class="chrome-top">
+    <span class="chrome-mark">braun</span>
+    <span>End Programme · 1932 — Now</span>
+  </div>
+  <div class="body">
+    <div>
+      <span style="font-size: 10pt; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(255,255,255,0.42); display: inline-flex; align-items: center; gap: 14pt; margin-bottom: 0.3in;">
+        <span style="display:inline-block;width:36pt;height:1px;background:var(--accent);"></span>
+        Thank you
+        <span style="display:inline-block;width:36pt;height:1px;background:var(--accent);"></span>
+      </span>
+      <h1 class="mantra-line">Weniger,<br><em>aber besser.</em></h1>
+      <p class="mantra-sub">Less, but better.</p>
+      <p class="mantra-attr">— Max McDonough · INTD-215 · Spring 2026</p>
+    </div>
+  </div>
+  <div class="chrome-bot">
+    <span><span class="chrome-led"></span>End of deck</span>
+    <span class="chrome-accent">35 / 35</span>
+  </div>
+</section>
+
+</body>
+</html>

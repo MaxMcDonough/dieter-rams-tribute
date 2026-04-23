@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Process Book · A Designer's Tribute to Dieter Rams. Final project for Designing for Screens (INTD-215), Spring 2026. Documentation of research, design, and four build phases." />
+  <title>Process Book · Dieter Rams Tribute · Max McDonough</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ---------- PROCESS BOOK SPECIFIC ---------- */
+    body { background: var(--color-off-white); }
+    .pb-page { max-width: 880px; margin: 0 auto; padding: 80px 64px; }
+    .pb-cover {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 80px 64px;
+      background: var(--color-dark);
+      color: var(--color-white);
+    }
+    .pb-cover-top { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
+    .pb-cover-mark { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: lowercase; position: relative; }
+    .pb-cover-mark::before { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 1px; background: var(--color-accent); }
+    .pb-cover-meta { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-braun-grey); font-variant-numeric: tabular-nums; }
+    .pb-cover-mid { display: grid; gap: 28px; max-width: 760px; }
+    .pb-cover-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--color-accent); display: inline-flex; align-items: center; gap: 14px; }
+    .pb-cover-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--color-accent); }
+    .pb-cover-title { font-family: var(--font-serif); font-style: italic; font-size: clamp(56px, 9vw, 120px); font-weight: 400; letter-spacing: -0.04em; line-height: 0.9; color: var(--color-white); }
+    .pb-cover-sub { font-size: clamp(16px, 1.6vw, 22px); color: rgba(255,255,255,0.62); line-height: 1.5; max-width: 580px; font-weight: 300; }
+    .pb-cover-bottom { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 32px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .pb-cover-bottom dl { display: grid; gap: 4px; }
+    .pb-cover-bottom dt { font-size: 9.5px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.32); font-variant-numeric: tabular-nums; }
+    .pb-cover-bottom dd { font-size: 13px; color: rgba(255,255,255,0.78); }
+
+    .pb-toc { background: var(--color-off-white); }
+    .pb-toc-header { display: grid; gap: 14px; margin-bottom: 56px; }
+    .pb-toc-list { list-style: none; display: grid; gap: 1px; background: var(--color-light); border: 1px solid var(--color-light); }
+    .pb-toc-row { background: var(--color-white); }
+    .pb-toc-link { display: grid; grid-template-columns: 60px 1fr auto; gap: 24px; padding: 22px 28px; text-decoration: none; color: inherit; align-items: baseline; transition: background 0.3s ease; }
+    .pb-toc-link:hover { background: #fbfaf6; }
+    .pb-toc-num { font-family: var(--font-serif); font-style: italic; font-size: 28px; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+    .pb-toc-title { font-family: var(--font-sans); font-size: 17px; font-weight: 500; color: var(--color-text); letter-spacing: -0.005em; }
+    .pb-toc-page { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: var(--color-mid); font-variant-numeric: tabular-nums; }
+    .pb-toc-sub { font-size: 13px; color: var(--color-text-light); margin-top: 2px; }
+
+    .pb-section { padding: 80px 0; border-top: 1px solid var(--color-light); }
+    .pb-section:first-of-type { border-top: none; }
+    .pb-section-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 14px; display: inline-flex; align-items: center; gap: 14px; }
+    .pb-section-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--color-accent); }
+    .pb-section h2 { font-family: var(--font-serif); font-size: clamp(32px, 4.6vw, 56px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.05; margin-bottom: 28px; color: var(--color-text); }
+    .pb-section h3 { font-family: var(--font-sans); font-size: 22px; font-weight: 500; letter-spacing: -0.015em; margin-top: 48px; margin-bottom: 14px; color: var(--color-text); }
+    .pb-section h4 { font-size: 15px; font-weight: 600; letter-spacing: 0.04em; margin-top: 28px; margin-bottom: 10px; color: var(--color-text); }
+    .pb-section p { font-size: 15.5px; line-height: 1.75; margin-bottom: 18px; color: var(--color-text); }
+    .pb-section p.pb-lead { font-size: 19px; font-weight: 300; line-height: 1.55; color: var(--color-text); margin-bottom: 28px; }
+    .pb-section ul, .pb-section ol { margin: 0 0 18px 0; padding-left: 24px; }
+    .pb-section li { font-size: 15.5px; line-height: 1.75; margin-bottom: 6px; color: var(--color-text); }
+    .pb-section em { font-style: italic; color: var(--color-text); }
+    .pb-section strong { font-weight: 600; }
+    .pb-section a { color: var(--color-accent); border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+
+    .pb-quote { border-left: 3px solid var(--color-accent); padding: 18px 24px; margin: 32px 0; background: var(--color-white); border-radius: 0 2px 2px 0; }
+    .pb-quote p { font-family: var(--font-serif); font-style: italic; font-size: 19px; line-height: 1.55; color: var(--color-text); margin-bottom: 8px; }
+    .pb-quote cite { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-mid); font-style: normal; font-variant-numeric: tabular-nums; }
+
+    .pb-stack { display: grid; gap: 12px; margin: 24px 0; padding: 18px 22px; background: var(--color-white); border: 1px solid var(--color-light); }
+    .pb-stack-row { display: grid; grid-template-columns: 130px 1fr; gap: 16px; align-items: baseline; }
+    .pb-stack-label { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-mid); font-variant-numeric: tabular-nums; }
+    .pb-stack-value { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: var(--color-text); }
+
+    .pb-version { display: grid; grid-template-columns: 80px 1fr auto; gap: 24px; padding: 22px 0; border-top: 1px solid var(--color-light); align-items: baseline; }
+    .pb-version:last-child { border-bottom: 1px solid var(--color-light); }
+    .pb-version-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; color: var(--color-accent); font-variant-numeric: tabular-nums; }
+    .pb-version-title { font-size: 16px; font-weight: 500; color: var(--color-text); margin-bottom: 4px; }
+    .pb-version-desc { font-size: 13.5px; line-height: 1.6; color: var(--color-text-light); }
+    .pb-version-link { font-size: 10px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text); border-bottom: 1px solid currentColor; padding-bottom: 1px; text-decoration: none; }
+
+    .pb-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 32px 0; }
+    .pb-card { padding: 24px 28px; background: var(--color-white); border: 1px solid var(--color-light); }
+    .pb-card h4 { margin-top: 0; }
+
+    .pb-callout { padding: 24px 28px; background: var(--color-dark); color: var(--color-white); margin: 32px 0; }
+    .pb-callout p { color: rgba(255,255,255,0.78); margin-bottom: 0; font-size: 15px; }
+    .pb-callout strong { color: var(--color-accent); }
+
+    .pb-pagebreak { page-break-after: always; }
+
+    .pb-decl { background: var(--color-white); border: 1px solid var(--color-light); padding: 32px 36px; margin: 32px 0; }
+    .pb-decl h4 { margin-top: 0; }
+    .pb-decl-row { display: grid; grid-template-columns: 180px 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--color-light); align-items: baseline; }
+    .pb-decl-row:first-of-type { border-top: none; padding-top: 0; }
+    .pb-decl-label { font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-mid); }
+    .pb-decl-value { font-size: 14px; line-height: 1.6; color: var(--color-text); }
+
+    .pb-footer { background: var(--color-dark); color: var(--color-white); padding: 64px 64px 48px; margin-top: 80px; }
+    .pb-footer-inner { max-width: 880px; margin: 0 auto; }
+    .pb-footer h3 { font-family: var(--font-serif); font-style: italic; font-size: clamp(36px, 5vw, 56px); margin-bottom: 24px; color: var(--color-white); font-weight: 400; }
+    .pb-footer p { color: rgba(255,255,255,0.62); margin-bottom: 12px; }
+    .pb-footer-meta { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.42); font-variant-numeric: tabular-nums; }
+
+    @media print {
+      .pb-cover, .pb-section, .pb-page { page-break-inside: avoid; }
+      .pb-section h2 { page-break-after: avoid; }
+      body { background: #fff; }
+      .pb-cover { background: #fff; color: #000; min-height: auto; }
+      .pb-cover-title, .pb-cover-mark, .pb-cover-eyebrow { color: #000; }
+      .pb-cover-sub, .pb-cover-meta, .pb-cover-bottom dt, .pb-cover-bottom dd { color: #333; }
+      .pb-callout { background: #f4f2ed; color: #000; }
+      .pb-callout p { color: #333; }
+      .pb-footer { background: #fff; color: #000; }
+      .pb-footer h3, .pb-footer p { color: #000; }
+    }
+
+    @media (max-width: 720px) {
+      .pb-page, .pb-cover { padding: 56px 24px; }
+      .pb-cover-bottom { grid-template-columns: 1fr 1fr; }
+      .pb-grid-2 { grid-template-columns: 1fr; }
+      .pb-toc-link { grid-template-columns: 50px 1fr; }
+      .pb-toc-page { display: none; }
+      .pb-stack-row { grid-template-columns: 1fr; gap: 4px; }
+      .pb-version { grid-template-columns: 60px 1fr; }
+      .pb-version-link { grid-column: 2; padding-top: 8px; }
+      .pb-decl-row { grid-template-columns: 1fr; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- =====  COVER  ===== -->
+<section class="pb-cover">
+  <div class="pb-cover-top">
+    <span class="pb-cover-mark">braun</span>
+    <span class="pb-cover-meta">Process Book · 26 pages · v1.0 · 2026.04</span>
+  </div>
+
+  <div class="pb-cover-mid">
+    <span class="pb-cover-eyebrow">A designer's tribute to Dieter Rams</span>
+    <h1 class="pb-cover-title">Less,<br><em style="font-style: italic;">but better.</em></h1>
+    <p class="pb-cover-sub">Process documentation for the design and build of a six-page editorial tribute to the work and ten principles of Dieter Rams. From a hand-coded white page to a multi-chapter Braun catalogue.</p>
+  </div>
+
+  <div class="pb-cover-bottom">
+    <dl><dt>Author</dt><dd>Max McDonough</dd></dl>
+    <dl><dt>Course</dt><dd>INTD-215 · Designing for Screens</dd></dl>
+    <dl><dt>Instructor</dt><dd>Colby May</dd></dl>
+    <dl><dt>Term</dt><dd>Spring 2026</dd></dl>
+  </div>
+</section>
+
+<div class="pb-pagebreak"></div>
+
+<!-- =====  TABLE OF CONTENTS  ===== -->
+<div class="pb-page pb-toc">
+  <div class="pb-toc-header">
+    <span class="pb-section-eyebrow">Contents</span>
+    <h2>Eleven sections, in order.</h2>
+    <p style="font-size:15px; line-height:1.7; color:var(--color-text-light); max-width:560px;">The book mirrors how the project actually unfolded: rationale, research, design, four build phases, then reflection. Every claim is grounded in a real artefact saved in the repository.</p>
+  </div>
+
+  <ol class="pb-toc-list">
+    <li class="pb-toc-row"><a href="#overview" class="pb-toc-link"><span class="pb-toc-num">I</span><div><div class="pb-toc-title">Project Overview</div><div class="pb-toc-sub">What was made, why, and what it answers.</div></div><span class="pb-toc-page">p. 03</span></a></li>
+    <li class="pb-toc-row"><a href="#why-rams" class="pb-toc-link"><span class="pb-toc-num">II</span><div><div class="pb-toc-title">Why Dieter Rams</div><div class="pb-toc-sub">Designer selection · personal influence on practice.</div></div><span class="pb-toc-page">p. 05</span></a></li>
+    <li class="pb-toc-row"><a href="#research" class="pb-toc-link"><span class="pb-toc-num">III</span><div><div class="pb-toc-title">Research</div><div class="pb-toc-sub">Personas, journey maps, precedent, mood, wireframes.</div></div><span class="pb-toc-page">p. 08</span></a></li>
+    <li class="pb-toc-row"><a href="#design-system" class="pb-toc-link"><span class="pb-toc-num">IV</span><div><div class="pb-toc-title">Design System</div><div class="pb-toc-sub">Type, colour, grid, the device language.</div></div><span class="pb-toc-page">p. 11</span></a></li>
+    <li class="pb-toc-row"><a href="#phase-1" class="pb-toc-link"><span class="pb-toc-num">V</span><div><div class="pb-toc-title">Build Phase 1 · Self-coded base</div><div class="pb-toc-sub">Hand-written HTML, CSS, vanilla JS.</div></div><span class="pb-toc-page">p. 14</span></a></li>
+    <li class="pb-toc-row"><a href="#phase-2" class="pb-toc-link"><span class="pb-toc-num">VI</span><div><div class="pb-toc-title">Build Phase 2 · 21st.dev plugins</div><div class="pb-toc-sub">Four React components adapted to vanilla.</div></div><span class="pb-toc-page">p. 16</span></a></li>
+    <li class="pb-toc-row"><a href="#phase-3" class="pb-toc-link"><span class="pb-toc-num">VII</span><div><div class="pb-toc-title">Build Phase 3 · Claude Code</div><div class="pb-toc-sub">Skeuomorphic Braun-instrument language.</div></div><span class="pb-toc-page">p. 18</span></a></li>
+    <li class="pb-toc-row"><a href="#phase-4" class="pb-toc-link"><span class="pb-toc-num">VIII</span><div><div class="pb-toc-title">Build Phase 4 · Multi-page architecture</div><div class="pb-toc-sub">From one scroll to five chapters.</div></div><span class="pb-toc-page">p. 21</span></a></li>
+    <li class="pb-toc-row"><a href="#walkthrough" class="pb-toc-link"><span class="pb-toc-num">IX</span><div><div class="pb-toc-title">Page-by-page walkthrough</div><div class="pb-toc-sub">Decisions on every chapter.</div></div><span class="pb-toc-page">p. 23</span></a></li>
+    <li class="pb-toc-row"><a href="#reflection" class="pb-toc-link"><span class="pb-toc-num">X</span><div><div class="pb-toc-title">Reflection</div><div class="pb-toc-sub">What I learned. What I'd change.</div></div><span class="pb-toc-page">p. 25</span></a></li>
+    <li class="pb-toc-row"><a href="#declaration" class="pb-toc-link"><span class="pb-toc-num">XI</span><div><div class="pb-toc-title">AI Use Declaration &amp; Brief Appendix</div><div class="pb-toc-sub">Honest accounting of tools used.</div></div><span class="pb-toc-page">p. 26</span></a></li>
+  </ol>
+</div>
+
+<div class="pb-pagebreak"></div>
+
+<!-- =====  I · OVERVIEW  ===== -->
+<div class="pb-page" id="overview">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">I · Overview</span>
+    <h2>What was made.</h2>
+    <p class="pb-lead">A six-page editorial website honouring Dieter Rams — the German industrial designer whose ten principles for good design (1976) and forty-two years at Braun shaped the visual language of every product in your pocket.</p>
+    <p>The site is a designed argument. It doesn't only document Rams's principles — it tries to embody them. Every section is built around an actual Braun product as a metaphor: the principles laid out as the keypad of an ET 66 calculator, the timeline scrolling past the dial of a T 1000 World Receiver, the career figures read from the VU meters of a studio mixer, the legacy broadcast as channels of a six-channel hi-fi rack.</p>
+    <p>That is the thesis: <em>good design is testable</em>. If the work is the proof of the principles, the medium that documents the work should be the same proof, scaled to the screen.</p>
+
+    <div class="pb-callout">
+      <p><strong>The brief in one line —</strong> Make a screen-based piece of work that demonstrates a clear understanding of a designer's practice. The screen-based piece itself should function as evidence of that understanding, not just a description of it.</p>
+    </div>
+
+    <h3>Final deliverable</h3>
+    <ul>
+      <li><strong>index.html</strong> — Cover with hero + numbered table of contents</li>
+      <li><strong>about.html</strong> — Chapter I · Biography + Braun T 1000 Timeline dial</li>
+      <li><strong>principles.html</strong> — Chapter II · Ten principles as ET 66 calculator</li>
+      <li><strong>work.html</strong> — Chapter III · Nine objects in detail (parallax)</li>
+      <li><strong>impact.html</strong> — Chapter IV · Studio meters · Hi-fi rack · Designers He Shaped</li>
+      <li><strong>invitation.html</strong> — Chapter V · The Eleventh Principle + Closing Mantra</li>
+    </ul>
+
+    <p>Plus a complete archive of evolution snapshots, UX research artefacts (10 PDFs), and this process book.</p>
+
+    <h3>By the numbers</h3>
+    <div class="pb-stack">
+      <div class="pb-stack-row"><span class="pb-stack-label">Pages</span><span class="pb-stack-value">6 (Cover + 5 chapters)</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Total markup</span><span class="pb-stack-value">~115 KB across 6 pages</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Stylesheet</span><span class="pb-stack-value">~5,400 lines · single style.css</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Script</span><span class="pb-stack-value">~1,300 lines · single vanilla script.js</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Frameworks</span><span class="pb-stack-value">None. No React, no Vue, no Tailwind, no jQuery.</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Build tools</span><span class="pb-stack-value">None. Plain HTML/CSS/JS opens directly in any browser.</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Versions saved</span><span class="pb-stack-value">4 (v1 self-coded → v2 plugins → v3 Claude Code → v4 multi-page)</span></div>
+    </div>
+  </section>
+</div>
+
+<!-- =====  II · WHY RAMS  ===== -->
+<div class="pb-page" id="why-rams">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">II · Selection</span>
+    <h2>Why Dieter Rams.</h2>
+
+    <p class="pb-lead">There was no shortlist. The minute the brief asked for a designer who has shaped how I think about the work, the answer was Rams.</p>
+
+    <p>I came to Rams the way most people my age do: through Apple. Long before I knew his name, I knew the iPod's click wheel, the iMac G4's swivel arm, the iPhone's calculator app. When I learned that Jonathan Ive — Apple's chief design officer for two decades — had repeatedly cited Rams as his single greatest influence, the lineage clicked instantly. The 1958 T 3 pocket radio became the 2001 iPod. The 1987 ET 66 calculator became iOS Calculator in 2008. The same colour-coded keypad. The same restrained casing. The same conviction that an object can teach itself.</p>
+
+    <p>That lineage matters less than what's behind it. Rams's ten principles, written in 1976, remain the closest the field of industrial design has ever come to an ethical compass. Not a style. Not a movement. A test. <em>Is my design good design?</em> — and a way to answer.</p>
+
+    <div class="pb-quote">
+      <p>"Good design is as little design as possible. Less, but better — because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity."</p>
+      <cite>Principle 10 · Dieter Rams · 1976</cite>
+    </div>
+
+    <h3>What this means for my own practice</h3>
+
+    <p>I've spent most of my time in design school making things busier than they need to be. More gradients, more decoration, more "vibe." Rams gave me the opposite vocabulary — the explicit permission to remove. Every project I've worked on this year has gotten shorter, quieter, more specific because of him.</p>
+
+    <p>Three things from Rams that I've internalised:</p>
+
+    <ol>
+      <li><strong>Restraint is testable.</strong> "Less, but better" isn't a feeling. You can audit a design against the ten principles and get a verdict. That changes how I critique my own work.</li>
+      <li><strong>Form is inventory.</strong> The SK 4's clear lid (1956) was radical because it refused to hide what was inside. Good design shows the user what they own. I think about that every time I'm tempted to disguise a UI.</li>
+      <li><strong>Long-lasting is the highest praise.</strong> Rams's 606 shelving has been in continuous production since 1960. The 620 chair since 1962. The opposite of the throwaway design economy. The brief I want my work to meet.</li>
+    </ol>
+
+    <p>So this project isn't only documentation. It's the longest I've spent inside one designer's head, deliberately, and the site is the artefact of that residency.</p>
+  </section>
+</div>
+
+<!-- =====  III · RESEARCH  ===== -->
+<div class="pb-page" id="research">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">III · Research</span>
+    <h2>Studying him before drawing him.</h2>
+
+    <p class="pb-lead">Before any pixel was placed, the project went through eight UX research deliverables — a standard sequence I've used in this course all semester.</p>
+
+    <p>All ten artefacts (eight numbered research PDFs plus the design board and Hi-Fi prototype) live in the project folder. Each one informed a structural decision I'd otherwise have made by feel.</p>
+
+    <div class="pb-stack">
+      <div class="pb-stack-row"><span class="pb-stack-label">01 · Persona</span><span class="pb-stack-value">Design students, professional designers, architecture-curious readers</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">02 · Empathy Map</span><span class="pb-stack-value">What the user thinks/sees/says/does looking up Rams</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">03 · Journey Map</span><span class="pb-stack-value">Search arrival → principle discovery → deep-work browse → biography</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">04 · User Flow</span><span class="pb-stack-value">Decision tree behind every primary task</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">05 · Site Map</span><span class="pb-stack-value">Anchored sections (later restructured into six pages)</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">06 · Mood Board</span><span class="pb-stack-value">Warm off-white grounds, IBM Plex, Braun-orange, perforated grids</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">07 · Precedent Research</span><span class="pb-stack-value">Vitsœ.com · Rams documentary site · MoMA · Braun archive</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">08 · Wireframes</span><span class="pb-stack-value">Low- and mid-fidelity grids · component composition</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">— · Design Board</span><span class="pb-stack-value">Type ramp · colour · grid units · component library</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">— · Hi-Fi Prototype</span><span class="pb-stack-value">The mockup the production build was implemented from</span></div>
+    </div>
+
+    <h3>Three takeaways that survived to the build</h3>
+
+    <ol>
+      <li><strong>The user wants the principles first.</strong> The journey map showed nearly every visitor's primary intent is "remind me what the ten principles are." Wireframe priority order: principles directly after about, before the work catalogue.</li>
+      <li><strong>The visual references are loud, the layout should be quiet.</strong> Precedent research showed that Vitsœ's own site is genuinely restrained — small type, generous white space, a single accent. The design board codified this: one accent colour (#C73D28), one type family (IBM Plex), one grid (8-pt baseline, 1160 max).</li>
+      <li><strong>The objects should never be mistaken for ornament.</strong> Mood board explicitly excluded "Rams-inspired" lifestyle photography that romanticises the work. Every product image on the final site is on a clean, off-white "catalogue plate" with a thin inner border — the visual treatment Vitsœ uses for its own product photography.</li>
+    </ol>
+  </section>
+</div>
+
+<!-- =====  IV · DESIGN SYSTEM  ===== -->
+<div class="pb-page" id="design-system">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">IV · Design System</span>
+    <h2>The rules of the room.</h2>
+
+    <p class="pb-lead">Every long-form site benefits from a small system applied rigorously. This one was built around five tokens that recur on every page.</p>
+
+    <h3>Type</h3>
+    <p><strong>IBM Plex Sans</strong> for everything UI: nav, body copy, captions, monospace meta strips. <strong>IBM Plex Serif</strong> in italic for the editorial moments — chapter titles, principle headlines, the closing mantra. Plex was chosen because it's the typeface IBM commissioned to replace Helvetica with something that has personality but stays out of the way — exactly the Rams brief.</p>
+
+    <h3>Colour</h3>
+    <div class="pb-stack">
+      <div class="pb-stack-row"><span class="pb-stack-label">Off-white ground</span><span class="pb-stack-value">#F4F2ED · the warm paper of a printed catalogue</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Dark</span><span class="pb-stack-value">#141311 · used for hero, devices, dark sections</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Text</span><span class="pb-stack-value">#242220 · slightly warm black</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Mid</span><span class="pb-stack-value">#A8A49B · captions, meta, secondary</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">Accent · Braun-orange</span><span class="pb-stack-value">#C73D28 · the equals key, every active state, every LED</span></div>
+    </div>
+
+    <p>One accent colour, used across the entire site. Used for: the equals key on the calculator, the active dial year, the meter needles, the rack LEDs, the active chapter rail tick, the eleventh-principle italic word, the corner brackets on framed elements. Restraint here is the design.</p>
+
+    <h3>Grid</h3>
+    <p>1160px max content width, 48px container padding, 8-pt baseline. Section padding 120px on desktop, scaled down for tablet/mobile. The Braun device frames inside use their own 18-pt internal padding to read as actual products.</p>
+
+    <h3>The device language</h3>
+    <p>The most consequential design decision: <em>every interactive section is wrapped in chrome that reads as a real Braun device</em>. Same dark gradient frame, same lowercase wordmark, same orange LED in the corner, same monospace meta strip. This was added in Build Phase 3 and is what knits the whole site together.</p>
+
+    <div class="pb-callout">
+      <p><strong>The token hidden in the CSS —</strong> <code style="font-family:'IBM Plex Mono',monospace;color:var(--color-accent);background:rgba(255,255,255,0.05);padding:2px 6px;">--device-bg</code>, <code style="font-family:'IBM Plex Mono',monospace;color:var(--color-accent);background:rgba(255,255,255,0.05);padding:2px 6px;">--device-window</code>, <code style="font-family:'IBM Plex Mono',monospace;color:var(--color-accent);background:rgba(255,255,255,0.05);padding:2px 6px;">--device-grille</code>. Define them once, reuse on the calculator, the dial, the meter rack, the hi-fi rack, the hero device, and the persistent HUD. Six different "products" share one set of materials.</p>
+    </div>
+
+    <h3>Motion</h3>
+    <p>One ease curve (cubic-bezier 0.16, 1, 0.3, 1 — "ease-out expressive"). One animation duration ramp (250ms for hover, 600ms for reveals, 1.4s for needle/odometer settling). Reduced-motion media query overrides every animation to instant. No bouncing, no overshoot, no ceremony — except the meter needle which deliberately overshoots once to feel mechanical.</p>
+  </section>
+</div>
+
+<!-- =====  V · PHASE 1  ===== -->
+<div class="pb-page" id="phase-1">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">V · Build Phase 1</span>
+    <h2>Self-coded base.</h2>
+    <p class="pb-lead">A clean white site, hand-written, opening directly in any browser. The foundation everything else is built on.</p>
+
+    <p>Before I touched a single AI tool or a third-party component, I built the entire site from scratch in raw HTML, CSS, and vanilla JavaScript. No framework, no build step, no NPM install — just three files and ten product photographs.</p>
+
+    <p>This was deliberate. I needed the foundation to be <em>mine</em>, top to bottom: the typographic system, the grid, the colour palette, the page structure, the responsive breakpoints, the page loader, the smooth scroll, the work card filter, the modal, the contact form. Every line of CSS in <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">style.css</code> through about line 1,960 is hand-written by me. Every line of JS through about line 388 is hand-written by me. The first nine product cards are hand-marked-up.</p>
+
+    <h3>What v1 contained</h3>
+    <ul>
+      <li>Hero section with a modular grid background that subtly drifts</li>
+      <li>About section with portrait, biographical metadata, and a four-paragraph bio</li>
+      <li>Ten Principles in a 2-column card grid (later replaced by the calculator)</li>
+      <li>Selected Work in a 3-column card grid with All/Braun/Vitsœ filter buttons</li>
+      <li>A pull-quote break section</li>
+      <li>Legacy in a 6-card grid with custom SVG icons</li>
+      <li>Vertical Timeline with year + content + dot marker</li>
+      <li>Contact section with form (name, email, subject dropdown, message)</li>
+      <li>Footer with credit line</li>
+    </ul>
+
+    <p>The full v1 lives in <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">_process_snapshots/v1_original_self_coded/</code>. It's a complete, shippable site — clean, restrained, working. It just doesn't yet do what the brief actually asks: <em>embody</em> Rams's principles instead of just listing them.</p>
+
+    <div class="pb-quote">
+      <p>"Good design makes a product understandable. It clarifies the product's structure. Better still, it can make the product talk. At best, it is self-explanatory."</p>
+      <cite>Principle 4 · Dieter Rams</cite>
+    </div>
+
+    <p>v1 was understandable. It wasn't yet self-explanatory. That's the gap the next three phases close.</p>
+  </section>
+</div>
+
+<!-- =====  VI · PHASE 2  ===== -->
+<div class="pb-page" id="phase-2">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">VI · Build Phase 2</span>
+    <h2>Plugins from 21st.dev.</h2>
+    <p class="pb-lead">Four React components from the open-source 21st.dev component library, each adapted from React/TypeScript/Tailwind into vanilla HTML/CSS/JS to fit the Rams aesthetic and avoid pulling in a build pipeline.</p>
+
+    <h3>What 21st.dev is</h3>
+    <p>21st.dev is a community-curated marketplace of open-source React/Tailwind UI components — micro-interactions, hero blocks, animated cards, that sort of thing. Each component is published as a single TSX file with the design pattern + accompanying demo. Authors reference shadcn/ui conventions for portability.</p>
+
+    <p>The catch for this project: 21st.dev components ship as React/TypeScript with Tailwind classes. My base is vanilla HTML/CSS/JS. So adoption meant rewriting each component from scratch in the host language, keeping the visual idea but losing the React abstractions.</p>
+
+    <h3>The four components I integrated</h3>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">PLUGIN 01</span>
+      <div>
+        <div class="pb-version-title">Dot-Pattern Quote Block</div>
+        <div class="pb-version-desc">A bordered frame with corner squares and a dot-grid background, holding a mixed-weight typographic statement. Adapted to use the Braun-orange accent and the site's dot pattern. Lives between Principles and Work.</div>
+      </div>
+    </div>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">PLUGIN 02</span>
+      <div>
+        <div class="pb-version-title">Parallax Scroll Feature</div>
+        <div class="pb-version-desc">Alternating left/right product feature rows with scroll-driven copy slide-up and image clip-reveal. Originally for stock photos — adapted to display the Braun product catalogue with technical spec lists. Now powers the entire Work chapter (9 objects).</div>
+      </div>
+    </div>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">PLUGIN 03</span>
+      <div>
+        <div class="pb-version-title">Wave-Path Interactive Line</div>
+        <div class="pb-version-desc">A spring-physics SVG line that bends with the cursor and snaps back. Integrated as "Philosophy of Form" — but later removed because the metaphor was too abstract. Replaced in Phase 4 with The Eleventh Principle, which does the same job (audience invitation) more legibly.</div>
+      </div>
+    </div>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">PLUGIN 04</span>
+      <div>
+        <div class="pb-version-title">Text-Rotate Scroll Gallery</div>
+        <div class="pb-version-desc">Sticky left pane with character-by-character animated text rotation, synced to vertically scrolling cards on the right. Powers the "Designers He Shaped" section — the seven contemporary designers Rams influenced, with hand-drawn SVG silhouettes of each one's signature work.</div>
+      </div>
+    </div>
+
+    <h3>What the adaptation taught me</h3>
+    <p>Every plugin had to be re-implemented, not pasted. The character-by-character text rotation in particular needed two passes — the first version broke "Jonathan Ive" mid-word because each character was an inline-block. The fix: wrap each word in an unbreakable inline-block, with character spans inside. Word-level wrapping, character-level animation. Small, real lesson about the cost of granularity.</p>
+
+    <p>Snapshot of the site at this stage lives in <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">_process_snapshots/v2_pre_immersive/</code>.</p>
+  </section>
+</div>
+
+<!-- =====  VII · PHASE 3  ===== -->
+<div class="pb-page" id="phase-3">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">VII · Build Phase 3</span>
+    <h2>Claude Code · the device language.</h2>
+    <p class="pb-lead">The site stopped being decorated and started being designed when I worked through it with Claude Code (Anthropic's coding agent, running in Cowork mode). Two days of pair-iteration where every section got rebuilt around an actual Braun product as its interface metaphor.</p>
+
+    <h3>What Claude Code is</h3>
+    <p>Claude Code is a command-line / IDE coding agent from Anthropic that can read, edit, and write across an entire codebase. It runs on the Claude Sonnet model. Cowork mode adds a desktop UI on top so you can collaborate visually. I used it as a pair-programmer — it read the existing site, I described intent, it generated the implementations, and I directed iteration until the visual matched what I wanted.</p>
+
+    <p>What changed between Phase 2 and Phase 3 wasn't the content. It was the form.</p>
+
+    <h3>The instrumentation pass</h3>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">DEVICE 01</span>
+      <div>
+        <div class="pb-version-title">Hero · Braun device faceplate</div>
+        <div class="pb-version-desc">The "Dieter Rams" name now sits inside a translucent device frame with the lowercase <em>braun</em> wordmark, perforated speaker-grille texture, four corner brackets, a pulsing orange LED, and a bottom readout strip showing Era · Origin · Studio.</div>
+      </div>
+    </div>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">DEVICE 02</span>
+      <div>
+        <div class="pb-version-title">Principles · ET 66 Calculator</div>
+        <div class="pb-version-desc">The 2-column principle grid was replaced by a full Braun ET 66 calculator. 10 principles → 10 keys, with principle 10 ("Less, but better") in the iconic orange equals-key position. The display panel above shows the active principle's number, italic title, and body. Click, hover, or press 1–9 / 0.</div>
+      </div>
+    </div>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">DEVICE 03</span>
+      <div>
+        <div class="pb-version-title">Timeline · T 1000 World Receiver dial</div>
+        <div class="pb-version-desc">Vertical timeline replaced by a horizontal scroll-driven dial. As the user scrolls, an 11-tick rotor of years slides under a fixed marker. A spinning knob rotates 36° per tick. A readout panel cross-fades the year, event, and body description. Modelled directly on the T 1000 shortwave radio's tuning panel.</div>
+      </div>
+    </div>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">DEVICE 04</span>
+      <div>
+        <div class="pb-version-title">Index · Studio meter rack</div>
+        <div class="pb-version-desc">The "By the numbers" grid was first built as six identical VU meters — but they implied false comparison (1932 and 42 looked the same on the dial). Rebuilt as <em>six purpose-built instruments</em>: date pad for Born, linear timeline for Tenure, 10-LED row for Principles, model plate for the 606, odometer for Products, histogram for Museums. Each one matches its data type.</div>
+      </div>
+    </div>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">DEVICE 05</span>
+      <div>
+        <div class="pb-version-title">Legacy · Six-channel hi-fi rack</div>
+        <div class="pb-version-desc">The 6-card legacy grid became a stacked rack-mount hi-fi system. Each legacy domain (Apple/Ive, Museums, Documentary, Education, Sustainability, Vitsœ) is a "channel" with a CH·0X label, a pulsing LED, body copy, a category tag, and an animated 10-segment LED VU bar showing "10/10 LIVE."</div>
+      </div>
+    </div>
+
+    <div class="pb-version">
+      <span class="pb-version-tag">DEVICE 06</span>
+      <div>
+        <div class="pb-version-title">Persistent bottom HUD</div>
+        <div class="pb-version-desc">A fixed tape-deck readout pinned to the bottom of every screen. Shows: lowercase <em>braun</em> wordmark · current chapter (0X / 05) · italic chapter name · scroll progress bar · percentage · pulsing LED · REC. Knits the whole site together as one continuous instrument.</div>
+      </div>
+    </div>
+
+    <h3>Shared device tokens</h3>
+    <p>The cohesion isn't accidental. Every Braun-style frame across the site shares CSS variables: <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">--device-bg</code>, <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">--device-window</code>, <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">--device-border</code>, <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">--device-grille</code>. Define the materials once, reuse them on every device. This is exactly how Braun's actual industrial design programme worked under Rams.</p>
+
+    <p>Snapshot of the site at this stage: <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">_process_snapshots/v3_immersive_singlepage/</code>.</p>
+  </section>
+</div>
+
+<!-- =====  VIII · PHASE 4  ===== -->
+<div class="pb-page" id="phase-4">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">VIII · Build Phase 4</span>
+    <h2>From one scroll to five chapters.</h2>
+    <p class="pb-lead">Colby May's note in critique was the most "Rams" feedback I got: a single endless scroll inherently violates "less, but better." Each screen has to do too much. A multi-page architecture where each page focuses on one subject would honour the principle more directly.</p>
+
+    <p>So the entire site was restructured into six focused pages — a cover plus five chapters — connected by a chapter rail and shared shell. Each page does one thing. Each page has room to breathe. The user reads the way they'd read a printed catalogue.</p>
+
+    <div class="pb-stack">
+      <div class="pb-stack-row"><span class="pb-stack-label">index.html</span><span class="pb-stack-value">Cover · Hero + numbered table of contents</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">about.html</span><span class="pb-stack-value">Chapter I · Biography + Braun T 1000 Timeline</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">principles.html</span><span class="pb-stack-value">Chapter II · Ten Principles · ET 66 Calculator</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">work.html</span><span class="pb-stack-value">Chapter III · Nine objects in detail</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">impact.html</span><span class="pb-stack-value">Chapter IV · Numbers + Legacy + Influence</span></div>
+      <div class="pb-stack-row"><span class="pb-stack-label">invitation.html</span><span class="pb-stack-value">Chapter V · Eleventh Principle + Closing Mantra</span></div>
+    </div>
+
+    <h3>The Eleventh Principle (closing move)</h3>
+    <p>The original closing — an abstract spring-physics line you could bend — was killed in this phase because the metaphor was illegible. The replacement: a single typographic prompt. <em>"Rams stopped at ten. Add yours, in one word."</em> The visitor types one word. A 14-character counter ticks up, turning warning at 12 and red at 14. Submit. Their word is filed as Principle 11, a stamped record appears, and the phrase is copied to their clipboard.</p>
+
+    <p>This is the closing argument: the principles aren't dead text. The framework is alive enough to extend. The visitor leaves the site having added to it.</p>
+
+    <h3>Shared shell · what every chapter page now has</h3>
+    <ul>
+      <li>Page loader with the chapter Roman numeral as the centred glyph</li>
+      <li>Dark "Chapter intro" header with giant accent-orange Roman, chapter tag, title in serif, and "0X / 05" counter</li>
+      <li>Chapter rail on the right with all 6 chapters; current one underlined in accent</li>
+      <li>Persistent bottom HUD updating with chapter name and scroll position</li>
+      <li>Chapter footer nav with prev/next chapter links in editorial style</li>
+      <li>Top nav showing all 5 chapters with the active one underlined</li>
+      <li>Keyboard navigation: <kbd style="font-family:'IBM Plex Mono',monospace;background:var(--color-light);padding:1px 5px;border-radius:2px;font-size:11px;">0</kbd>–<kbd style="font-family:'IBM Plex Mono',monospace;background:var(--color-light);padding:1px 5px;border-radius:2px;font-size:11px;">5</kbd> chapters, <kbd style="font-family:'IBM Plex Mono',monospace;background:var(--color-light);padding:1px 5px;border-radius:2px;font-size:11px;">j</kbd> next, <kbd style="font-family:'IBM Plex Mono',monospace;background:var(--color-light);padding:1px 5px;border-radius:2px;font-size:11px;">k</kbd> prev, <kbd style="font-family:'IBM Plex Mono',monospace;background:var(--color-light);padding:1px 5px;border-radius:2px;font-size:11px;">?</kbd> help</li>
+    </ul>
+
+    <p>Final state: <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">_process_snapshots/v4_multipage_final/</code> — and the live files in the project root.</p>
+  </section>
+</div>
+
+<!-- =====  IX · WALKTHROUGH  ===== -->
+<div class="pb-page" id="walkthrough">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">IX · Page-by-page</span>
+    <h2>Decisions on every chapter.</h2>
+    <p class="pb-lead">A short rationale for each page so the reader (or the viewer of the presentation video) understands the why, not just the what.</p>
+
+    <h3>Cover · index.html</h3>
+    <p>The cover does two things and only two: introduces the subject (the Braun-framed name "Dieter Rams") and gives the reader the table of contents. No long-form copy. No "about Max." A single hero, a single five-row contents block, a single line of credit at the bottom. The page exists to <em>orient</em>, not to <em>perform</em>. This is the most explicit application of "less, but better" anywhere in the site.</p>
+
+    <h3>I · about.html — Biography</h3>
+    <p>Two-section page. The first half is a traditional editorial layout — portrait + metadata + four-paragraph bio. The second half is the Braun T 1000 Timeline dial, scroll-driven. Why the dial? Because reading a chronology by year-letter-year-letter on a vertical line is exactly how a tuner panel works. The user is already trained for it. The metaphor isn't decoration — it's recognition.</p>
+
+    <h3>II · principles.html — The ET 66 Calculator</h3>
+    <p>The hardest page to design. The principles are the most-quoted text in industrial design — every Rams tribute lays them out in a numbered list. I needed a treatment that wasn't a list. The ET 66 keypad solved it: ten principles, ten keys. Principle 10 ("Less, but better") sits in the orange equals position because the equals key is where the calculator says "this is the answer." That joke wrote itself.</p>
+
+    <h3>III · work.html — Nine objects in detail</h3>
+    <p>Originally a 3×3 grid of cards with All/Braun/Vitsœ filters. Replaced with a parallax feature scroll because: (a) cards in a grid all read as equivalent, and these objects aren't equivalent; (b) each one deserves a paragraph explaining what design problem it solved; (c) the alternating left/right layout treats the catalogue as an editorial spread. Each row gets a 4-cell technical spec dl underneath because Rams's Braun catalogues did exactly this.</p>
+
+    <h3>IV · impact.html — Numbers, Legacy, Influence</h3>
+    <p>Three sections, three different instrument metaphors, on a single page because they all answer the same question: <em>what does this work add up to?</em></p>
+    <ul>
+      <li><strong>Index (the meters)</strong> — six purpose-built readouts. The first version used identical VU dials, which falsely implied 1932 and 42 were comparable values. Rebuilt with the right instrument per data type.</li>
+      <li><strong>Legacy (the rack)</strong> — six channels of broadcast. Apple/Ive, Museums, Documentary, Education, Sustainability, Vitsœ. Each rack module has its own LED VU bar showing "10/10 · LIVE" because every one of these channels is still active.</li>
+      <li><strong>Influence (Designers He Shaped)</strong> — sticky left pane with character-rotating designer name; right pane scrolls through 7 typographic product cards (Ive's iPhone, Fukasawa's MUJI CD player, Morrison's Air Chair, Newson's Apple Watch, Hecht's MUJI cookware, Grcic's Chair_One, Jongerius's Polder Sofa).</li>
+    </ul>
+
+    <h3>V · invitation.html — The Eleventh Principle</h3>
+    <p>The final page is short on purpose. A single prompt: "Rams stopped at ten. Add yours, in one word." The visitor leaves having contributed to the framework. Below the form, the original ten principles are tucked into a collapsible disclosure for reference. Then the closing mantra: a full-bleed black panel with massive sans-light "Weniger," followed by serif-italic accent-orange "<em>aber besser.</em>" Like the last frame of a documentary.</p>
+  </section>
+</div>
+
+<!-- =====  X · REFLECTION  ===== -->
+<div class="pb-page" id="reflection">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">X · Reflection</span>
+    <h2>What I learned.</h2>
+
+    <p class="pb-lead">Three things I didn't know going in.</p>
+
+    <h3>1. The metaphor has to be load-bearing.</h3>
+    <p>Skeuomorphism gets a bad name because it's usually decorative — a leather-textured calendar app, a green-felt poker table. What I learned from this project is that skeuomorphism <em>works</em> when the metaphor does real navigational work. The calculator keypad is an actual interface for choosing a principle. The dial is an actual interface for moving through a timeline. The meter rack is an actual interface for reading career figures. None of them are decoration — they're the navigation. That's the difference between costume and structure.</p>
+
+    <h3>2. Honour the principle by applying it.</h3>
+    <p>My first instinct was to add. Add another section, another readout, another animation. The most consequential edits in this project were all subtractions: deleting the original Work grid, replacing the wave Discipline Test with a single-input form, splitting the long scroll into focused pages. Every removal made the site closer to what Rams actually argued for.</p>
+
+    <h3>3. AI-assisted iteration changes the design tempo.</h3>
+    <p>Working with Claude Code in Phase 3 let me try and discard ideas at a speed I couldn't have on my own. The first version of the meter rack used identical dials — wrong. We replaced it with six purpose-built instruments inside the same hour. The wave path was killed and replaced with the Eleventh Principle in one conversation. Bad ideas that would normally have taken a week to admit and remove took a half-day. That's a different working method, and it's worth being honest about it.</p>
+
+    <h3>What I'd change with another week</h3>
+    <ul>
+      <li><strong>An audio track.</strong> The site already speaks the language of a hi-fi system. A subtle UI tone when calculator keys are pressed (the actual ET 66 click), a tape-hiss undertone on the HUD, a quiet warm hum on the dark sections. Optional, but strongly in-character.</li>
+      <li><strong>A printable PDF chapter export.</strong> Each chapter could print as a real catalogue page — the device frames, the typography, all of it. Rams designed objects that could be passed down. The site should be passable down too.</li>
+      <li><strong>A dark/light mode.</strong> The current site is committed to one ground (warm off-white) and one dark (#141311). A pure-paper light mode and a deeper black-paper dark mode would give the device frames more material range without changing any content.</li>
+    </ul>
+  </section>
+</div>
+
+<!-- =====  XI · DECLARATION  ===== -->
+<div class="pb-page" id="declaration">
+  <section class="pb-section">
+    <span class="pb-section-eyebrow">XI · Declaration · Brief Appendix</span>
+    <h2>Honest accounting.</h2>
+
+    <p class="pb-lead">A clear declaration of every external tool used in this project, in the spirit of the framework's sixth principle: <em>good design is honest.</em></p>
+
+    <div class="pb-decl">
+      <h4>AI Use Declaration</h4>
+
+      <div class="pb-decl-row">
+        <span class="pb-decl-label">Original concept</span>
+        <span class="pb-decl-value">100% Max McDonough. Designer selection, narrative arc, visual system, the Braun-instrument metaphors, every design decision.</span>
+      </div>
+
+      <div class="pb-decl-row">
+        <span class="pb-decl-label">Build Phase 1 (v1)</span>
+        <span class="pb-decl-value">100% self-coded. Hand-written HTML, CSS, vanilla JS. No AI assistance.</span>
+      </div>
+
+      <div class="pb-decl-row">
+        <span class="pb-decl-label">Build Phase 2 (v2)</span>
+        <span class="pb-decl-value">Self-integrated. Four React/TSX components from <strong>21st.dev</strong> (open-source community component library) re-implemented by me in vanilla HTML/CSS/JS to fit the existing host.</span>
+      </div>
+
+      <div class="pb-decl-row">
+        <span class="pb-decl-label">Build Phase 3 (v3)</span>
+        <span class="pb-decl-value">AI-assisted. <strong>Claude Code</strong> (Anthropic's coding agent, running on the Claude Sonnet model in Cowork mode) was used as a pair-programmer for the skeuomorphic Braun-instrument language: ET 66 calculator, T 1000 dial, studio meter rack, hi-fi rack, hero device, persistent HUD. I provided design direction; Claude Code generated implementations; I directed iteration until the visual matched intent.</span>
+      </div>
+
+      <div class="pb-decl-row">
+        <span class="pb-decl-label">Build Phase 4 (v4)</span>
+        <span class="pb-decl-value">AI-assisted restructure. Following Colby May's critique note that a multi-page architecture would better honour "less, but better," Claude Code helped split the single-page site into the current six-page chapter structure. The architectural decision was the instructor's; the implementation was AI-assisted.</span>
+      </div>
+
+      <div class="pb-decl-row">
+        <span class="pb-decl-label">Research deliverables</span>
+        <span class="pb-decl-value">100% Max McDonough. All eight UX research PDFs (persona, empathy map, journey map, user flow, site map, mood board, precedent research, wireframes) plus the design board and Hi-Fi prototype were authored by me prior to any AI involvement.</span>
+      </div>
+
+      <div class="pb-decl-row">
+        <span class="pb-decl-label">Process book + presentation script</span>
+        <span class="pb-decl-value">AI-assisted writing. Drafted with Claude Code, reviewed and edited by me. The arguments and rationale are mine; the prose was iterated together.</span>
+      </div>
+
+      <div class="pb-decl-row">
+        <span class="pb-decl-label">Image assets</span>
+        <span class="pb-decl-value">Public-domain product photographs of Braun and Vitsœ objects. Dieter Rams portrait by Vitsœ, used under CC BY-SA 3.0. No AI-generated images.</span>
+      </div>
+
+      <div class="pb-decl-row">
+        <span class="pb-decl-label">Typography &amp; libraries</span>
+        <span class="pb-decl-value">IBM Plex (open-source, OFL licence) via Google Fonts. No other dependencies.</span>
+      </div>
+    </div>
+
+    <h3>Project Brief (for reference)</h3>
+    <p>The original assignment brief from INTD-215 / Designing for Screens, Spring 2026 — Project 2: Designer Tribute Website.</p>
+
+    <div class="pb-callout">
+      <p><strong>Brief —</strong> Select a designer whose work has shaped your own design practice. Conduct primary research on their life, work, and influence. Develop an editorial website that demonstrates a clear understanding of the designer's contribution to the field. The site should function as evidence of your understanding, not just as a description of it. Include a process book documenting research, design decisions, and iteration. Submit alongside a recorded presentation walking through the work.</p>
+    </div>
+
+    <p>The full original brief PDFs (Design Brief, Documentation Brief) are preserved in <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">_archive/</code>: <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">MaxMcDProject_2_Design_Brief.pdf</code>, <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">MaxMcDProject_2_Documentation.pdf</code>, <code style="font-family:'IBM Plex Mono',monospace;font-size:13px;">MaxMcDProject_2_Brief_Documentation.pdf</code>.</p>
+  </section>
+</div>
+
+<!-- =====  CLOSING  ===== -->
+<footer class="pb-footer">
+  <div class="pb-footer-inner">
+    <h3>Weniger, <em style="color:var(--color-accent);">aber besser.</em></h3>
+    <p>Less, but better. The phrase Rams put on a Braun radio in 1958 and never stopped meaning. The phrase this whole project was an exercise in honouring.</p>
+    <p>Thank you for reading.</p>
+
+    <div class="pb-footer-meta">
+      <span>Process Book · v1.0 · 2026.04</span>
+      <span>Max McDonough · INTD-215 · Spring 2026</span>
+      <span>Designed &amp; built · Not affiliated with Vitsœ or Braun GmbH</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll for in-page anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
